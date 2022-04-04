@@ -214,6 +214,7 @@ aside .imagen-sidebar{
     height:100%;
 }
 .banda-wikiplantas{
+    width:90%;
     display:flex;
     background-color:rgb(255, 255, 255);
     flex-direction: column;
@@ -266,7 +267,7 @@ aside .imagen-sidebar{
     align-items:center; 
     justify-content:center;
     /* height:500px; */
-    width:1200px;
+    width:auto;
     background-color:rgb(255, 255, 255);
     border: 5px solid #000;
     border-radius: 50%;
@@ -274,7 +275,7 @@ aside .imagen-sidebar{
 }
 .tarjeta-imagen img{
     height:400px;
-    width:auto;
+    width:400px;
     /* background-color:rgb(255, 255, 255); */
     border-radius: 50%;
     z-index:1;
@@ -291,6 +292,7 @@ aside .imagen-sidebar{
     right:100px;
     z-index:0;
     border-radius: 0 15px 15px 0;
+    width:100%;
 }
 .tarjeta-texto2{
     /*     font-family: 'Fredoka', sans-serif; */
@@ -304,6 +306,7 @@ aside .imagen-sidebar{
     left:100px;
     z-index:0;
     border-radius: 15px 0 0 15px;
+    width:100%;
 }
 .banda-tienda{
     display:flex;
