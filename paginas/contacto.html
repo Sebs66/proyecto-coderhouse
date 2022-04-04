@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="shortcut icon" href="../imagenes/plant-icon.png">  <!-- Poner el ícono de la página -->
+    <!-- <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">Plant icons created by Freepik - Flaticon</a> -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- hoja de estilos -->
+    <!-- Google Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+
+</head>
+<body class="font">
+    <!-- Header -->
+    <header id="header">
+        <div class="banner">
+
+        </div>
+        
+        <!-- Menú de navegación -->
+        <div class="Menu">
+            <h1 class="Titulo"><a href="../index.html"> Casa Plantas </a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" class="leaf"> Inicio </a></li>
+                    <li><a href="./quienes_somos.html" class="leaf"> Quienes somos</a></li>
+                    <li><a href="./wikiplantas.html" class="leaf"> Wikiplantas</a></li>
+                    <li><a href="./tienda.html" class="leaf"> Tienda</a></li>
+                    <li><a href="./contacto.html" class="leaf"> Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="banda-contacto">
+
+            <h2>Contacto</h2>
+            <h4>Tienes algun comentario o sugerencia para el equipo?</h4>
+            <p>Escribenos! Te responderemos pronto</p>
+            <div class="banda-contacto__formulario">
+                <form action="enviar.php" method="get"> <!-- Etiqueta para crear formulario -->
+                    <fieldset>
+                        <div class="formulario">
+                            <div class="formulario__inputs">
+                                <div class="formulario__inputs__lineas">
+                                    <label for="nombre1"> Nombre:    </label> <!-- El for es para que se sepa a que texto corresponde y se seleccione cuando apretas el texto del label -->
+                                    <input type="text" id="nombre1" placeholder="Escribe acá" required>
+                                </div>
+                                <div class="formulario__inputs__lineas">
+                                    <label for="apellido"> Apellido:    </label>
+                                    <input type="text" id="apellido" placeholder="Escribe acá" required>
+                                </div>
+                                <div class="formulario__inputs__lineas">
+                                    <label for="email"> Email:   </label>
+                                    <input type="text" id="email" placeholder="Escribe acá" required>
+                                </div>
+                                <div class="formulario__inputs__lineas">
+                                    <label for="comment"> Comentario:    </label>
+                                    <textarea name="multi" id="comment" cols="21" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <div>
+                                <label> Desea suscribirse al newsletter? </label>
+                                <input type="radio" name="radio1" value="1" checked> Si
+                                <input type="radio" name="radio1" value="0"> No
+                            </div>
+                            <div>
+                                <input type="submit" value="Enviar ahora">
+                                <input type="reset" value=" Borrar todo">
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<footer id="pie-pagina">
+    <p><a href="#header"> Volver arriba</a></p>
+</footer>
+</html>

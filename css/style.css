@@ -1,0 +1,405 @@
+   /* reset browser styles */
+   html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+   table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+   figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+   time, mark, audio, video {
+       margin: 0;
+       padding: 0;
+       border: 0;
+       font-size: 100%;
+       vertical-align: baseline;
+   }
+
+
+
+body { 
+    background-color:rgb(255, 255, 255);
+}
+
+
+.Titulo {
+    font-family: 'Fredoka', sans-serif;
+    position:relative;
+    left:10px;
+}
+
+.Menu {
+    margin: 20px 0 50px 0;
+    background-color: rgb(2, 167, 29);
+    padding: 10px 0 10px 0;
+}
+.Menu h1 {
+    display: inline;
+}
+.Menu nav{
+    float:right;
+}
+.Menu li {
+    list-style-type: none;
+    display: inline-block;
+    /* background-color:rgb(255, 255, 255); */
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 800;
+}
+
+.Menu a {
+    text-decoration: none;  
+}
+
+.leaf {
+    background-color: rgb(151, 221, 45);
+    margin: 0px;
+    border-radius: 50px 0 50px 0;
+    padding: 10px 20px; 
+}
+
+.leaf:hover {
+    background-color: rgba(96, 138, 33, 0.801);    
+}
+
+.banner {
+    background-image: url(../imagenes/banner-wide.png); 
+    height:156px;
+}
+
+
+.principal {
+    float:none;
+    font-family: 'Fredoka', sans-serif;
+    margin-bottom: 40px;
+    
+}
+.principal a {
+    text-decoration: none;  
+}
+
+.font {
+    font-family: 'Fredoka', sans-serif;    
+}
+.foto1 {
+    position: relative;
+    width: 100%;
+    height:30rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /* position:fixed */
+    background-image: url(../imagenes/foto-plantas-wide.jpg);
+    background-position: center center;
+    background-repeat:no-repeat;
+    margin-bottom:40px; /* me separa el espacio luego la foto */
+}
+
+.texto-imagen{
+    display:block;
+}
+.texto-imagen h2{
+    position:relative;
+    left: 5%;
+    color:green;
+    /* background-color:black; */
+    display:inline-block;
+    font-size:40px;
+    max-width: 800px;    
+}
+.texto-imagen p{
+    position:relative;
+    left: 5%;
+    color:green;
+    /* background-color:black; */
+    display:inline-block;
+    font-size:32px;
+    max-width: 800px;    
+}
+aside {
+    float: right;
+    font-style: italic;
+    /* background-color: rgb(219, 15, 15); */
+    position:relative;
+    right:5%;
+}
+.imagen-sidebar{
+    height:auto;
+    width:800px;
+    float:right;
+    display:inline;
+    padding: 22px 0 0 0; /* estoy centrando de forma manual, como hacerlo automático? */
+}
+
+/* .parallax{
+	background-attachment: fixed;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size:  cover;
+	height:50rem;
+	max-width: 100%;
+	position: relative
+
+.img-uno{background-image: url(../imagenes/foto-plantas-wide.jpg)}
+}
+*/
+.main-index{
+    margin-bottom: 50px;
+}
+.banda-miniaturas{ /* banda para trabajar las miniaturas */
+    background-color:rgb(0, 128, 0);
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    padding:50px;
+    row-gap: 50px;
+  
+}
+.banda-miniaturas h2{
+    font-size: 100px;
+    color:rgb(255, 255, 255);
+}
+.miniaturas{
+    background-color:rgb(255, 192, 203);
+    display:flex;
+    flex-flow:row wrap; /* la direccion del flex será en filas y se ajustará en múltiples lineas */
+    justify-content: space-evenly; /* los elementos estarán equiespaciados */
+    align-items:center;
+    width:80%;
+    row-gap: 30px;
+    padding:10px;
+}
+.miniaturas-items{
+    height: 400px;
+    border: 5px solid rgb(2, 167, 29);
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 0 10% 0;
+}
+
+.miniaturas-items a {
+    text-decoration: none;  
+}
+.miniaturas-items:hover{
+    height: 400px;
+    border: 5px solid rgb(72, 104, 25);  
+    background-color: rgb(255, 255, 255);
+}
+.miniaturas-items p{ /* Clase LEAF como arriba! */
+    position:relative;
+    bottom:30px;
+    left: 5px;
+    font-size:30px;
+    background-color: rgb(151, 221, 45);
+    margin: 0px;
+    border-radius: 50px 0 50px 0;
+    padding: 10px 20px; 
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+} 
+.miniaturas-items p:hover {
+    background-color: rgb(72, 104, 25);  
+    color:rgb(255, 255, 255);  
+}
+.miniaturas-items img{
+    width:auto;
+    height:100%;
+}
+.banda-wikiplantas{
+    display:flex;
+    background-color:rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    padding:50px;
+    row-gap: 50px;
+}
+.banda-intro__iconos{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+}
+.banda-intro__iconos img{
+    width:100px;
+    height:100px;
+
+}
+.banda-intro h2{
+    font-size:50px;
+}
+.banda-intro p{
+    font-size:30px;
+}
+.infografias{
+/*     background-color:rgb(255, 192, 203); */
+    display:flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding: 20px 20px;
+    width:90%;
+}
+.tarjeta1{
+/*     background-color: rgb(255, 255, 255); */
+    display:flex;
+    flex-flow:row nowrap;
+    align-items:center;
+    /* gap:20px; */
+}
+.tarjeta2{
+ /*    background-color: rgb(255, 255, 255); */
+    display:flex;
+    flex-flow:row-reverse nowrap;
+    align-items:center;
+    /* gap:20px; */
+}
+.tarjeta-imagen {
+    display:flex;
+    align-items:center; 
+    justify-content:center;
+    /* height:500px; */
+    width:1200px;
+    background-color:rgb(255, 255, 255);
+    border: 5px solid #000;
+    border-radius: 50%;
+    z-index:1;
+}
+.tarjeta-imagen img{
+    height:400px;
+    width:auto;
+    /* background-color:rgb(255, 255, 255); */
+    border-radius: 50%;
+    z-index:1;
+}
+.tarjeta-texto1{
+/*     font-family: 'Fredoka', sans-serif; */
+    display:flex;
+    flex-flow:column nowrap;
+    height:80%;
+    align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+    background-color: rgb(124, 252, 209);
+    padding:0 10px 0 120px;
+    position:relative;
+    right:100px;
+    z-index:0;
+    border-radius: 0 15px 15px 0;
+}
+.tarjeta-texto2{
+    /*     font-family: 'Fredoka', sans-serif; */
+    display:flex;
+    flex-flow:column nowrap;
+    height:80%;
+    align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+    background-color: rgb(124, 252, 209);
+    padding:0 120px 0 10px;
+    position:relative;
+    left:100px;
+    z-index:0;
+    border-radius: 15px 0 0 15px;
+}
+.banda-tienda{
+    display:flex;
+    flex-flow: row wrap;
+   /*  background-color: rgb(0, 255, 170); */
+    background-color: rgb(2, 167, 29);
+    justify-content:center; /* centra el div que está adentro */
+    /* align-items: center; */
+    padding: 20px 0;
+}
+.banda-tienda__casillas{
+    display:flex;
+    flex-flow: row wrap;
+    /* background-color: rgb(255, 22, 216); */
+    gap:10px;
+    width:80%;
+    justify-content: space-around;
+}
+.banda-tienda__casillas_item {
+    display:flex;
+    border: 3px solid #000;
+    background-color: rgb(255, 255, 255);
+    justify-content:center;  /* me centra el contenido, debe tener display:flex activado! */
+    flex-direction: column;
+    border-radius: 5px;
+}
+.banda-tienda__casillas_item img{
+    height:400px;
+    width:400px;
+}
+.banda-tienda__casillas_item__texto{
+    display:flex;
+    flex-direction: column;
+
+}
+.banda-tienda__casillas_item__texto h4{
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+}
+.banda-tienda__casillas_item__texto p{
+    font-size:20px;
+    display:flex;
+    justify-content: center;
+}
+.banda-contacto{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aqua; */
+    width:80%;
+    margin:auto;
+    text-align: center;
+
+}
+.banda-contacto h2{
+    font-size: 30px;
+}
+.banda-contacto__formulario{
+    display:flex;
+    padding:50px 0 0 0; 
+    width:50%;
+    justify-content: center;
+    /* background-color: rgb(255, 0, 221); */
+    margin:auto;
+}
+.formulario{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr 1fr 1fr ;
+    width:100%;
+    gap:10px;
+
+}
+.formulario__inputs{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin:auto;
+    width:100%
+}
+.formulario__inputs__lineas{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:90%;
+    margin:auto;
+}
+#pie-pagina{
+    background: rgb(2, 167, 29);
+    border: 2px solid rgb(0, 0, 0)
+}
+.banda-quienes_somos{
+    display:flex;
+    width: 90%;
+    /* background-color: rgb(135, 235, 5); */
+    margin:auto;
+    flex-direction: column;
+
+}
+.banda-quienes_somos h2{
+    font-size: 30px;
+}
+.banda-direccion{
+    display:flex;
+    width: 90%;
+    /* background-color: rgb(135, 235, 5); */
+    margin:auto;
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+}
