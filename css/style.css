@@ -1,22 +1,33 @@
-   /* reset browser styles */
-   html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
-   table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
-   figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-   time, mark, audio, video {
-       margin: 0;
-       padding: 0;
-       border: 0;
-       font-size: 100%;
-       vertical-align: baseline;
-   }
-
-
-
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
 body { 
     background-color:rgb(255, 255, 255);
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto auto auto;
 }
-
-
+header {
+    grid-area: header;
+}
+main{
+    grid-area: main;
+    margin-bottom: 50px;;
+}
+footer{
+    grid-area: footer;
+}
 .Titulo {
     font-family: 'Fredoka', sans-serif;
     position:relative;
@@ -78,7 +89,7 @@ body {
 }
 .foto1 {
     position: relative;
-    width: 100%;
+    width: 90%;
     height:30rem;
     display: block;
     margin-left: auto;
@@ -91,7 +102,8 @@ body {
 }
 
 .texto-imagen{
-    display:block;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
 }
 .texto-imagen h2{
     position:relative;
@@ -111,20 +123,17 @@ body {
     font-size:32px;
     max-width: 800px;    
 }
-aside {
-    float: right;
-    font-style: italic;
-    /* background-color: rgb(219, 15, 15); */
+aside{
+    display:flex;
+    align-self: center;
+    justify-self: center;
+}
+aside .imagen-sidebar{
     position:relative;
-    right:5%;
-}
-.imagen-sidebar{
     height:auto;
-    width:800px;
-    float:right;
-    display:inline;
-    padding: 22px 0 0 0; /* estoy centrando de forma manual, como hacerlo automático? */
+    width:90%;
 }
+
 
 /* .parallax{
 	background-attachment: fixed;
@@ -138,9 +147,7 @@ aside {
 .img-uno{background-image: url(../imagenes/foto-plantas-wide.jpg)}
 }
 */
-.main-index{
-    margin-bottom: 50px;
-}
+
 .banda-miniaturas{ /* banda para trabajar las miniaturas */
     background-color:rgb(0, 128, 0);
     display:flex;
@@ -297,7 +304,7 @@ aside {
     display:flex;
     flex-flow: row wrap;
    /*  background-color: rgb(0, 255, 170); */
-    background-color: rgb(2, 167, 29);
+    background-color:rgb(0, 128, 0);
     justify-content:center; /* centra el div que está adentro */
     /* align-items: center; */
     padding: 20px 0;
@@ -380,10 +387,6 @@ aside {
     width:90%;
     margin:auto;
 }
-#pie-pagina{
-    background: rgb(2, 167, 29);
-    border: 2px solid rgb(0, 0, 0)
-}
 .banda-quienes_somos{
     display:flex;
     width: 90%;
@@ -403,3 +406,70 @@ aside {
     flex-direction: column;
     padding: 50px 0px 50px 0px;
 }
+#pie-pagina{
+    background: rgb(2, 167, 29);
+    border: 2px solid rgb(0, 0, 0);
+    padding-top: 10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+#pie-pagina .planilla_footer{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+#pie-pagina .planilla_footer p:nth-child(2){ /* Horarios Tienda */
+    grid-column:1/2;
+    grid-row:2/3;
+}
+#pie-pagina .planilla_footer p:nth-child(3){ /* Lunes a Jueves */
+    grid-column:2/3;
+    grid-row:2/3;
+}
+#pie-pagina .planilla_footer p:nth-child(4){ /* Viernes y Sábado */
+    grid-column:2/3;
+    grid-row:3/4;
+}
+#pie-pagina .planilla_footer p:nth-child(5){ /* Horario largo */
+    grid-column:3/4;
+    grid-row:2/3;
+}
+#pie-pagina .planilla_footer p:nth-child(6){ /* Horario corto */
+    grid-column:3/4;
+    grid-row:3/4;
+}
+#pie-pagina .planilla_footer h4:nth-child(7){ /* Email de contacto */
+    grid-column:1/2;
+    grid-row:5/6;
+}
+#pie-pagina .planilla_footer p:nth-child(8){ /* email */
+    grid-column:2/3;
+    grid-row:5/6;
+}
+#pie-pagina .planilla_footer h4:nth-child(9){ /* email */
+    grid-column:1/2;
+    grid-row:6/7;
+}
+#pie-pagina .planilla_footer p:nth-child(10){ /* email */
+    grid-column:2/3;
+    grid-row:6/7;
+}
+#pie-pagina img{
+    height: 100%;
+    width:auto;
+}
+#pie-pagina a{
+    height:25px;
+    display:inline-block;
+}
+#pie-pagina .banda_iconos{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .planilla_footer__informacion{
+
+} */

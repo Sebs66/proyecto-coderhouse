@@ -7,24 +7,20 @@
     <title>Casa Plantas</title>
     <link rel="shortcut icon" href="./imagenes/plant-icon.png">  <!-- Poner el ícono de la página -->
     <!-- <a href="https://www.flaticon.com/free-icons/plant" title="plant icons">Plant icons created by Freepik - Flaticon</a> -->
-    <link rel="stylesheet" href="./css/style.css">
     <!-- Google Fonts links -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css"> <!-- ultimo link por lectura en cascada -->
 
 
 
 </head>
-<body>
+<body> <!-- Clase para definir una grid con areas -->
     <!-- Header -->
-    <header id="header">
-        <div class="banner">
-
-        </div>
-        
-        <!-- Menú de navegación -->
-        <div class="Menu">
+    <header id="header"> <!-- Area de encabezado, contiene el menu, banner y logo -->
+        <div class="banner"></div> <!-- banner manegado desde css -->
+        <div class="Menu">        <!-- inicio Menú de navegación -->
             <h1 class="Titulo leaf"><a href="index.html"> Casa Plantas </a></h1>
             <nav>
                 <ul>
@@ -35,16 +31,15 @@
                     <li><a href="./paginas/contacto.html" class="leaf"> Contacto</a></li>
                 </ul>
             </nav>
-        </div>
+        </div>  <!-- final Menú de navegación -->
 
     </header>
-    <main class="main-index">
-
-        <div class="principal">
-            <div class="foto1"></div>
+    <main>
+        <div class="principal"> <!-- Imagen en el front + texto de bienvenida y foto al lado -->
+            <div class="foto1"></div> <!-- foto manejada desde Css -->
             <!-- <img src="./imagenes/foto-plantas-wide.jpg" alt="Foto de fondo con plantas"class="foto1"> -->
             <!-- Photo by Huy Phan from Pexels -->
-            <div class="texto-imagen">
+            <div class="texto-imagen"> <!-- Banda con el texto de bienvenida y una foto -->
                 <h2> Bienvenido a <strong><a href="index.html"> Casa Plantas</a></strong>!</h2><br>
                 <p>
                     En nuestra página encontrarás informacion para ayudarte a conocer más sobre tus plantitas y sus cuidados. <br><br>
@@ -58,7 +53,7 @@
                 </aside>
             </div>
         </div>
-        <div class="banda-miniaturas">
+        <div class="banda-miniaturas"> <!-- Inicio banda de miniaturas -->
             <div><h2>Nuestras plantas</h2></div>
             <div class="miniaturas">
                 <div class="miniaturas-items">
@@ -110,12 +105,38 @@
                     <p><a href="./paginas/wikiplantas.html">Maranta Lubbersiana</a></p>  
                 </div>
             </div>
-        </div>
+        </div> <!-- Final banda de miniaturas -->
     </main>
 
-    <footer id="pie-pagina">
-        <p><a href="#header"> Volver arriba</a></p>
-    </footer>
+    <footer id="pie-pagina"> <!-- Inicio footer -->
+        <div>
+            <a href="./index.html" class="leaf"> Home </a>
+            <a href="#header" class="leaf"> Arriba</a>
+        </div>
+    
+        <div class="planilla_footer">
+            <h4>Información:</h4>
+            <p>Horarios Tienda:</p>
+            <p>Lunes a Jueves</p>
+            <p>Viernes y Sabado</p>
+            <p>9:00 - 13:00 y 15:00 - 18:00</p>
+            <p>9:00 - 13:00</p>
+            <h4>Email de contacto</h4>
+            <p>Contacto@casaplantas.com</p>
+            <h4>Dirección</h4>
+            <p>Santiago, Chile</p>
+    
+        </div>
+        <div>
+            <h4>Nuestras redes:</h4>
+            <div class="banda_iconos">
+                <a href="https://www.instagram.com" target="_blank" title="instagram icons"><img src="./imagenes/instagram-logo.png" alt=""></a>
+                <a href="https://www.facebook.com" target="_blank" title="facebook icons"><img src="./imagenes/facebook-logo.png" alt=""></a>
+            </div>
+           
+        </div>
+      
+    </footer> <!-- Final footer -->
 
 
 
