@@ -400,11 +400,12 @@ aside .imagen-sidebar{
 }
 .banda-direccion{
     display:flex;
-    width: 90%;
+    /*    width: 90%; */
     /* background-color: rgb(135, 235, 5); */
     margin:auto;
     flex-direction: column;
     padding: 50px 0px 50px 0px;
+    justify-content: center;
 }
 #pie-pagina{
     background: rgb(2, 167, 29);
