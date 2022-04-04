@@ -28,32 +28,37 @@ main{
 footer{
     grid-area: footer;
 }
-.Titulo {
+.titulo {
     font-family: 'Fredoka', sans-serif;
     position:relative;
     left:10px;
-}
-
-.Menu {
-    margin: 20px 0 50px 0;
-    background-color: rgb(2, 167, 29);
-    padding: 10px 0 10px 0;
-}
-.Menu h1 {
+/*     top:10px; */
+    width:fit-content;
     display: inline;
 }
-.Menu nav{
-    float:right;
+
+.menu {
+    display:flex;
+    justify-content:space-between;
+    margin: 20px 0 50px 0;
+    background-color: rgb(2, 167, 29);
+    /* height:40px; */
 }
-.Menu li {
-    list-style-type: none;
-    display: inline-block;
+.menu h1 {
+    display: inline;
+}
+
+.menu nav {
+    display:flex;
+    flex-direction: row;
+    float: right;
+/*     display: inline-block; */
     /* background-color:rgb(255, 255, 255); */
     font-family: 'Fredoka', sans-serif;
     font-weight: 800;
 }
 
-.Menu a {
+.menu a {
     text-decoration: none;  
 }
 
@@ -471,6 +476,101 @@ aside .imagen-sidebar{
     justify-content: space-around;
 }
 
-/* .planilla_footer__informacion{
+/* SECCION RESPONSIVE */
 
-} */
+.click-menu{
+    visibility:hidden;
+
+}
+/*
+@media screen and (max-width: 768px) { /* La pantalla tablet */ /* 
+     .menu {
+        position:relative;
+        z-index: 1;
+    }
+    .menu nav {
+        flex-direction: column;
+ 
+    }
+    .menu nav div {
+        text-align: center;
+    }
+    .menu nav div:nth-child(1){
+        visibility:visible;
+    }
+    .menu nav div:nth-child(2){
+        visibility:hidden;
+    }
+    .menu nav div:nth-child(3){
+        visibility:hidden;
+    }
+    .menu nav div:nth-child(4){
+        visibility:hidden;
+    }
+    .menu nav div:nth-child(5){
+        visibility:hidden;
+    }
+    .menu nav div:nth-child(6){
+        visibility:hidden;
+    }
+    main{
+        position:relative;
+        z-index: -1;
+        bottom:80px;
+    }
+    .menu nav div .leaf:checked{
+        background-color: rgba(96, 138, 33, 0.801);
+        visibility:visible;
+    }
+
+}
+*/
+@media screen and (max-width: 480px) { /* La pantalla celular */
+    .menu{
+        display:flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+    }
+    .menu nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        column-gap: 50px;
+/*      margin-top: 15px; */
+    }
+    .texto-imagen {
+        display:flex;
+        flex-direction: column;
+        width:90%;
+
+    }
+    .texto-imagen h2{
+        font-size:20px;
+    }
+    .texto-imagen p{
+        font-size:18px;
+    }
+    aside {
+        justify-content: center;
+
+    }
+    #pie-pagina{
+        flex-direction: column;
+    }
+    #pie-pagina .planilla_footer{
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+
+}
+@media screen and (max-width: 768px) { /* La pantalla tablet */
+    .menu{
+        display:flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .titulo {
+        top:0px;
+    }
+}
