@@ -511,10 +511,14 @@ main{
 
 /* SECCION RESPONSIVE */
 
-.click-menu{
-    visibility:hidden;
-
-}
+/* Los carouseles que estan hidden en el desktop */
+/* .banda-wikiplantas .banda-intro .carousel-iconos{
+     display:none;
+} */
+/* .banda-wikiplantas .banda-intro .carousel-iconos img{
+    width:100px;
+    height:100px;
+} */
 
 /* MEDIA QUERIES */
 @media screen and (max-width:1400px){ 
@@ -532,6 +536,10 @@ main{
         width:300px;
         /* background-color:rgb(255, 255, 255); */
 
+    }
+    /* ocultamos la banda-intro iconos de wikiplantas */
+    .banda-wikiplantas .banda-intro .banda-intro__iconos{
+        display:none;
     }
 }
 @media screen and (max-width:1200px){
