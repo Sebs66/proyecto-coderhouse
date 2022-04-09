@@ -11,22 +11,16 @@ time, mark, audio, video {
 }
 body { 
     background-color:rgb(255, 255, 255);
-    display:grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-    grid-template-rows: auto auto auto;
-}
-header {
-    grid-area: header;
+    display:flex;
+    flex-direction: column;
+    min-width: 320px;
+    width:100%;
 }
 main{
-    grid-area: main;
     margin-bottom: 50px;;
 }
-footer{
-    grid-area: footer;
+#header{
+    width:100%;
 }
 .titulo {
     font-family: 'Fredoka', sans-serif;
@@ -77,8 +71,6 @@ footer{
     background-image: url(../imagenes/banner-wide.png); 
     height:156px;
 }
-
-
 .principal {
     float:none;
     font-family: 'Fredoka', sans-serif;
@@ -112,22 +104,13 @@ footer{
     margin:auto;
     grid-template-columns: 1fr 1fr;
 }
-.texto-imagen div{
+.texto-imagen .texto-imagen__texto{
     text-align:left;
     margin: auto;
-
+    padding-right:5%;
 }
-.texto-imagen div h2{
-    position:relative;
-    left: 5%;
-    color:green;
-    /* background-color:black; */
-    display:inline-block;
-    font-size:40px;
-    max-width: 800px;    
-}
-.texto-imagen div p{
-    position:relative;
+.texto-imagen .texto-imagen__texto h2{
+    position: relative;
     left: 5%;
     color:green;
     /* background-color:black; */
@@ -135,12 +118,21 @@ footer{
     font-size:32px;
     max-width: 800px;    
 }
-aside{
+.texto-imagen .texto-imagen__texto p{
+    position:relative;
+    left: 5%;
+    color:green;
+    /* background-color:black; */
+    display:inline-block;
+    font-size:24px;
+    max-width: 800px;    
+}
+.texto-imagen aside{
     display:flex;
     align-self: center;
-    justify-self: center;
+    justify-content: center;
 }
-aside .imagen-sidebar{
+.texto-imagen aside .imagen-sidebar{
     position:relative;
     height:auto;
     width:90%;
@@ -183,16 +175,17 @@ aside .imagen-sidebar{
 }
 .miniaturas-items{
     height: 400px;
+    width:400px;
     border: 5px solid rgb(2, 167, 29);
     background-color: rgb(255, 255, 255);
     border-radius: 0 0 10% 0;
+    text-align: center;
 }
 
 .miniaturas-items a {
     text-decoration: none;  
 }
 .miniaturas-items:hover{
-    height: 400px;
     border: 5px solid rgb(72, 104, 25);  
     background-color: rgb(255, 255, 255);
 }
@@ -218,6 +211,7 @@ aside .imagen-sidebar{
 }
 .banda-wikiplantas{
     width:90%;
+    margin:auto;
     display:flex;
     background-color:rgb(255, 255, 255);
     flex-direction: column;
@@ -269,7 +263,6 @@ aside .imagen-sidebar{
     display:flex;
     align-items:center; 
     justify-content:center;
-    /* height:500px; */
     width:auto;
     background-color:rgb(255, 255, 255);
     border: 5px solid #000;
@@ -430,43 +423,43 @@ aside .imagen-sidebar{
 #pie-pagina .planilla_footer{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
-#pie-pagina .planilla_footer p:nth-child(2){ /* Horarios Tienda */
+#pie-pagina .planilla_footer h4:nth-child(1){ /* Horarios Tienda */
     grid-column:1/2;
-    grid-row:2/3;
+    grid-row:1/2;
 }
-#pie-pagina .planilla_footer p:nth-child(3){ /* Lunes a Jueves */
+#pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
+    grid-column:2/3;
+    grid-row:1/2;
+}
+#pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
     grid-column:2/3;
     grid-row:2/3;
 }
-#pie-pagina .planilla_footer p:nth-child(4){ /* Viernes y Sábado */
-    grid-column:2/3;
-    grid-row:3/4;
+#pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
+    grid-column:3/4;
+    grid-row:1/2;
 }
-#pie-pagina .planilla_footer p:nth-child(5){ /* Horario largo */
+#pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
     grid-column:3/4;
     grid-row:2/3;
 }
-#pie-pagina .planilla_footer p:nth-child(6){ /* Horario corto */
-    grid-column:3/4;
+#pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
+    grid-column:1/2;
     grid-row:3/4;
 }
-#pie-pagina .planilla_footer h4:nth-child(7){ /* Email de contacto */
-    grid-column:1/2;
-    grid-row:5/6;
-}
-#pie-pagina .planilla_footer p:nth-child(8){ /* email */
+#pie-pagina .planilla_footer p:nth-child(7){ /* email */
     grid-column:2/3;
-    grid-row:5/6;
+    grid-row:3/4;
 }
-#pie-pagina .planilla_footer h4:nth-child(9){ /* email */
+#pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
     grid-column:1/2;
-    grid-row:6/7;
+    grid-row:4/5;
 }
-#pie-pagina .planilla_footer p:nth-child(10){ /* email */
+#pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
     grid-column:2/3;
-    grid-row:6/7;
+    grid-row:4/5;
 }
 #pie-pagina img{
     height: 100%;
@@ -488,49 +481,190 @@ aside .imagen-sidebar{
     visibility:hidden;
 
 }
-/*
-@media screen and (max-width: 768px) { /* La pantalla tablet */ /* 
-     .menu {
-        position:relative;
-        z-index: 1;
+
+/* MEDIA QUERIES */
+@media screen and (max-width:1400px){ 
+    .banda-wikiplantas{
+        width:90%;
     }
-    .menu nav {
-        flex-direction: column;
- 
+    .texto-imagen .texto-imagen__texto h2{
+        font-size:24px;
     }
-    .menu nav div {
-        text-align: center;
+    .texto-imagen .texto-imagen__texto p{
+        font-size: 18px;
     }
-    .menu nav div:nth-child(1){
-        visibility:visible;
+    .tarjeta-imagen img{
+        height:300px;
+        width:300px;
+        /* background-color:rgb(255, 255, 255); */
+
     }
-    .menu nav div:nth-child(2){
-        visibility:hidden;
-    }
-    .menu nav div:nth-child(3){
-        visibility:hidden;
-    }
-    .menu nav div:nth-child(4){
-        visibility:hidden;
-    }
-    .menu nav div:nth-child(5){
-        visibility:hidden;
-    }
-    .menu nav div:nth-child(6){
-        visibility:hidden;
-    }
-    main{
-        position:relative;
-        z-index: -1;
-        bottom:80px;
-    }
-    .menu nav div .leaf:checked{
-        background-color: rgba(96, 138, 33, 0.801);
-        visibility:visible;
+}
+@media screen and (max-width:1200px){
+    .tarjeta-imagen img{
+        height:250px;
+        width:250px;
+        /* background-color:rgb(255, 255, 255); */
+
     }
 
 }
-*/
+
+
+@media screen and (max-width:992px){ 
+    .texto-imagen{
+        display:flex;
+        flex-direction: column;
+    }
+    .texto-imagen .texto-imagen__texto{
+        margin-bottom: 30px;
+    }
+    .texto-imagen aside .imagen-sidebar{
+        width:70%;
+    }
+    .banda-miniaturas{
+        row-gap:20px;
+    }
+    .banda-miniaturas div h2{
+        font-size: 48px;
+    }
+    #pie-pagina .planilla_footer{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
+        grid-column:1/2;
+        grid-row:2/3;
+    }
+    #pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
+        grid-column:1/2;
+        grid-row:3/4;
+    }
+    #pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
+        grid-column:2/3;
+        grid-row:2/3;
+    }
+    #pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
+        grid-column:2/3;
+        grid-row:3/4;
+    }
+    #pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
+        grid-column:1/2;
+        grid-row:4/5;
+    }
+    #pie-pagina .planilla_footer p:nth-child(7){ /* email */
+        grid-column:2/3;
+        grid-row:4/5;
+    }
+    #pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
+        grid-column:1/2;
+        grid-row:5/6;
+    }
+    #pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
+        grid-column:2/3;
+        grid-row:5/6;
+    }
+}
+@media screen and (max-width: 768px) { /* La pantalla tablet */
+    #header .menu{
+        display:flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .titulo {
+        top:0px;
+    }
+    .miniaturas-items{
+        height: 300px;
+        width:300px;
+        border: 5px solid rgb(2, 167, 29);
+        background-color: rgb(255, 255, 255);
+        border-radius: 0 0 10% 0;
+        text-align: center;
+    }
+    .miniaturas-items p{
+        font-size: 24px;
+    }
+    #pie-pagina{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+    #pie-pagina .redes_sociales{
+        grid-row:1/2;
+        grid-column: 2/3;
+        display:flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+    #pie-pagina .redes_sociales .banda_iconos{
+        justify-content: center;
+        column-gap:10%;
+    }
+    #pie-pagina .planilla_footer{
+        grid-row:2/3; /* ubicación en la grid padre -> Pie-pagina */
+        grid-column:1/3; /* ubicación en la grid padre -> Pie-pagina */
+        width:fit-content;
+        align-self: center;
+        justify-self: center;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+    #pie-pagina .planilla_footer h4:nth-child(1){ /* Horarios Tienda */
+        grid-column:1/2;
+        grid-row:1/2;
+    }
+    #pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
+        grid-column:1/2;
+        grid-row:2/3;
+    }
+    #pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
+        grid-column:1/2;
+        grid-row:3/4;
+    }
+    #pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
+        grid-column:2/3;
+        grid-row:2/3;
+    }
+    #pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
+        grid-column:2/3;
+        grid-row:3/4;
+    }
+    #pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
+        grid-column:1/2;
+        grid-row:4/5;
+    }
+    #pie-pagina .planilla_footer p:nth-child(7){ /* email */
+        grid-column:2/3;
+        grid-row:4/5;
+    }
+    #pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
+        grid-column:1/2;
+        grid-row:5/6;
+    }
+    #pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
+        grid-column:2/3;
+        grid-row:5/6;
+    }
+}
+@media screen and (max-width: 576px){
+    #header .menu{
+        margin: 20px 0 20px 0;
+    }
+    .principal .foto1{
+        margin-bottom:10px;
+    }
+    .texto-imagen .texto-imagen__texto h2{
+        font-size:18px;
+    }
+    .texto-imagen .texto-imagen__texto p{
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 480px) { /* La pantalla celular */
     .menu{
         display:flex;
@@ -560,23 +694,5 @@ aside .imagen-sidebar{
     aside {
         justify-content: center;
 
-    }
-    #pie-pagina{
-        flex-direction: column;
-    }
-    #pie-pagina .planilla_footer{
-        grid-template-columns: 1fr 1fr 2fr;
-    }
-
-}
-@media screen and (max-width: 768px) { /* La pantalla tablet */
-    .menu{
-        display:flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .titulo {
-        top:0px;
     }
 }

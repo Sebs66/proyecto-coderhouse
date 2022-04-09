@@ -16,7 +16,7 @@
 
 
 </head>
-<body> <!-- Clase para definir una grid con areas -->
+<body> <!-- Usamos Flex -->
     <!-- Header -->
     <header id="header"> <!-- Area de encabezado, contiene el menu, banner y logo -->
         <div class="banner"></div> <!-- banner manegado desde css -->
@@ -39,7 +39,7 @@
             <!-- <img src="./imagenes/foto-plantas-wide.jpg" alt="Foto de fondo con plantas"class="foto1"> -->
             <!-- Photo by Huy Phan from Pexels -->
             <div class="texto-imagen"> <!-- Banda con el texto de bienvenida y una foto -->
-                <div>
+                <div class="texto-imagen__texto">
                     <h2> Bienvenido a <strong><a href="index.html"> Casa Plantas</a></strong>!</h2><br>
                     <p>
                         En nuestra página encontrarás informacion para ayudarte a conocer más sobre tus plantitas y sus cuidados. <br><br>
@@ -115,21 +115,18 @@
             <a href="./index.html" class="leaf"> Home </a>
             <a href="#header" class="leaf"> Arriba</a>
         </div>
-    
         <div class="planilla_footer">
-            <h4>Información:</h4>
-            <p>Horarios Tienda:</p>
+            <h4>Horarios Tienda:</h4>
             <p>Lunes a Jueves</p>
             <p>Viernes y Sabado</p>
             <p>9:00 - 13:00 y 15:00 - 18:00</p>
             <p>9:00 - 13:00</p>
-            <h4>Email de contacto</h4>
+            <h4>Email de contacto </h4>
             <p>Contacto@casaplantas.com</p>
             <h4>Dirección</h4>
             <p>Santiago, Chile</p>
-    
         </div>
-        <div>
+        <div class="redes_sociales">
             <h4>Nuestras redes:</h4>
             <div class="banda_iconos">
                 <a href="https://www.instagram.com" target="_blank" title="instagram icons"><img src="./imagenes/instagram-logo.png" alt=""></a>
@@ -137,10 +134,47 @@
             </div>
            
         </div>
-      
     </footer> <!-- Final footer -->
 
 
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
 
 </body>
