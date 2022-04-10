@@ -12,25 +12,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css"> <!-- ultimo link por lectura en cascada -->
 
 </head>
 
-<body> <!-- Usamos Flex -->
-    <!-- Header -->
+<body>
     <header id="header"> <!-- Area de encabezado, contiene el menu, banner y logo -->
         <div class="banner"></div> <!-- banner manegado desde css -->
-        <div class="menu">        <!-- inicio Menú de navegación -->
-            <div class="titulo leaf"><h1 ><a href="./index.html"> Casa Plantas </a></h1></div>
-            <nav>
-                   <!--  <div class="click-menu leaf"><p>Menú</p></div> -->
-                    <div class="leaf"><a href="index.html" > Inicio </a></div>
-                    <div class="leaf"><a href="./paginas/quienes_somos.html"> Quienes somos</a></div>
-                    <div class="leaf"><a href="./paginas/wikiplantas.html" > Wikiplantas</a></div>
-                    <div class="leaf"><a href="./paginas/tienda.html" > Tienda</a></div>
-                    <div class="leaf"><a href="./paginas/contacto.html" > Contacto</a></div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="leaf"><a class="navbar-brand" href="./index.html">Casa Plantas</a></div>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link active" aria-current="page" href="index.html" ><p>Inicio</p> </a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./paginas/quienes_somos.html"> Quienes somos</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./paginas/wikiplantas.html" > Wikiplantas</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./paginas/tienda.html" > Tienda</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./paginas/contacto.html" > Contacto</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
             </nav>
-        </div>  <!-- final Menú de navegación -->
 
     </header> <!-- fin del header -->
     <main>
@@ -44,7 +61,7 @@
                     <p>
                         En nuestra página encontrarás informacion para ayudarte a conocer más sobre tus plantitas y sus cuidados. <br><br>
                         Podrás saber más acerca de nuestro equipo en la sección <strong><a href="./paginas/quienes_somos.html"> Quienes somos</a></strong>. <br><br>
-                        <strong><a href="./paginas/wikiplantas.html"> Wikiplantas</a></strong> es nuestra wiki de platas! échale un vistazo. <br><br>
+                        <strong><a href="./paginas/wikiplantas.html"> Wikiplantas</a></strong> es nuestra wiki de plantas! échale un vistazo. <br><br>
                         En la sección <strong><a href="./paginas/tienda.html"> Tienda</a></strong> podrás ver las plantitas que tenemos en stock. <br><br>
                         Quieres contactarte con nosotros? Dejanos un comentario en nuestra sección <strong><a href="./paginas/contacto.html"> Contacto</a></strong>.
                     </p> 
@@ -60,51 +77,51 @@
             <div class="miniaturas">
                 <div class="miniaturas-items">
                     <img src="./imagenes/monstera-deliciosa.png" alt="monstera">
-                    <p><a href="./paginas/wikiplantas.html">Monstera deliciosa</a></p>
+                    <p><a href="./paginas/wikiplantas.html#monstera-deliciosa">Monstera deliciosa</a></p>
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/monstera-adansonii.jpg" alt="monstera-adansonii">
-                    <p><a href="./paginas/wikiplantas.html">Monstera Adansonii</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#monstera-adansonii">Monstera Adansonii</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/sansevieria-2.png" alt="sansevieria">
-                    <p><a id="./paginas/wikiplantas.html">Sansevieria</a></p>
+                    <p><a href="./paginas/wikiplantas.html#sansevieria">Sansevieria</a></p>
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo2">
-                    <p><a href="./paginas/wikiplantas.html">Philodendro Paraguayo</a></p>
+                    <p><a href="./paginas/wikiplantas.html#philodendro-paraguayo">Philodendro Paraguayo</a></p>
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/ficus-lyrata.jpg" alt="Ficus Lyrata">
-                    <p><a href="./paginas/wikiplantas.html">Ficus Lyrata</a></p>
+                    <p><a href="./paginas/wikiplantas.html#ficus-lyrata">Ficus Lyrata</a></p>
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/ficus-benjamina.jpg" alt="ficus-benjamina">
-                    <p><a href="./paginas/wikiplantas.html">Ficus Benjamina</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#ficus-benjamina">Ficus Benjamina</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/peperomia-cucharita.jpg" alt="peperomia-cucharita">
-                    <p><a href="./paginas/wikiplantas.html">Peperomia Cucharita</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#peperomia-cucharita">Peperomia Cucharita</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/peperomia-argyreia.jpeg" alt="peperomia-argyreia">
-                    <p><a href="./paginas/wikiplantas.html">Peperomia Argyreia</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#peperomia-argyreia">Peperomia Argyreia</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/peperomia-caperata.jpg" alt="peperomia-caperata">
-                    <p><a href="./paginas/wikiplantas.html">Peperomia Caperata</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#peperomia-caperata">Peperomia Caperata</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/neanthe-bella.jpg" alt="neanthe-bella">
-                    <p><a href="./paginas/wikiplantas.html">Neanthe Bella</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#neanthe-bella">Neanthe Bella</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/longifolio.jpg" alt="Longifolio">
-                    <p><a href="./paginas/wikiplantas.html">Longifolio</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#longifolio">Longifolio</a></p>  
                 </div>
                 <div class="miniaturas-items">
                     <img src="./imagenes/maranta-lubbersiana.png" alt="maranta-lubbersiana">
-                    <p><a href="./paginas/wikiplantas.html">Maranta Lubbersiana</a></p>  
+                    <p><a href="./paginas/wikiplantas.html#maranta-lubbersiana">Maranta Lubbersiana</a></p>  
                 </div>
             </div>
         </div> <!-- Final banda de miniaturas -->
@@ -136,6 +153,8 @@
         </div>
     </footer> <!-- Final footer -->
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 </body>
 </html>

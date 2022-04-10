@@ -19,41 +19,16 @@ body {
 main{
     margin-bottom: 50px;;
 }
-#header{
-    width:100%;
+.bg-light{
+    background-color:rgb(2, 167, 29)!important;
 }
-.titulo {
+.navbar-collapse{
+    flex-grow: inherit;
+}
+nav{
+    margin-bottom: 10px;
     font-family: 'Fredoka', sans-serif;
-    position:relative;
-    left:10px;
-/*     top:10px; */
-    width:fit-content;
-    display: inline;
-}
-
-.menu {
-    display:flex;
-    justify-content:space-between;
-    margin: 20px 0 50px 0;
-    background-color: rgb(2, 167, 29);
-    /* height:40px; */
-}
-.menu h1 {
-    display: inline;
-}
-
-.menu nav {
-    display:flex;
-    flex-direction: row;
-    float: right;
-/*     display: inline-block; */
-    /* background-color:rgb(255, 255, 255); */
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 800;
-}
-
-.menu a {
-    text-decoration: none;  
+    font-weight: 900;
 }
 
 .leaf {
@@ -79,6 +54,10 @@ main{
 }
 .principal a {
     text-decoration: none;  
+}
+.banda-miniaturas a {
+    text-decoration: none;
+    color: #000;
 }
 
 .font {
@@ -108,6 +87,9 @@ main{
     text-align:left;
     margin: auto;
     padding-right:5%;
+}
+.texto-imagen .texto-imagen__texto a{
+    color:rgb(17, 41, 14);
 }
 .texto-imagen .texto-imagen__texto h2{
     position: relative;
@@ -210,7 +192,7 @@ main{
     height:100%;
 }
 .banda-wikiplantas{
-    width:90%;
+    width:95%;
     margin:auto;
     display:flex;
     background-color:rgb(255, 255, 255);
@@ -222,6 +204,56 @@ main{
     row-gap: 50px;
 }
 .banda-wikiplantas .banda_intro{
+    padding-bottom: 20px;
+}
+.banda-intro__iconos{
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    padding: 20px 10px 30px 10px;
+}
+.banda-intro__iconos a{
+    position:relative;
+    z-index: 0;
+    border:solid 5px #FFF;
+}
+.banda-intro__iconos a:hover{
+    animation-name:shake;
+    animation-iteration-count:1;
+    animation-timing-function: linear;
+    animation-duration:500ms;
+    animation-delay:0s;
+    position:relative;
+    z-index: 1;
+    border:solid 5px rgb(0, 0, 0);
+    border-radius: 5%;
+}
+@keyframes shake{
+    25%{
+        transform:rotate(10deg);
+        bottom:5px;
+    }
+    50%{
+        transform:rotate(-20deg);
+        bottom:10px;
+    }
+    100%{
+        transform:rotate(10deg);
+        bottom:0px;
+    }
+}
+.banda-intro__iconos img{
+    width:100px;
+    height:100px;
+
+}
+.banda-intro__1200px h2{
+    font-size:50px;
+}
+.banda-intro__1200px p{
+    font-size:30px;
+}
+.banda-wikiplantas .banda-intro__1200px{
     padding-bottom: 20px;
 }
 .banda-intro__iconos{
@@ -277,7 +309,7 @@ main{
     flex-flow: row wrap;
     gap: 20px;
     padding: 20px 20px;
-    width:90%;
+    width:100%;
 }
 .tarjeta1{
 /*     background-color: rgb(255, 255, 255); */
@@ -314,29 +346,34 @@ main{
 /*     font-family: 'Fredoka', sans-serif; */
     display:flex;
     flex-flow:column nowrap;
-    height:80%;
+    height:90%;
     align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
     background-color: rgb(124, 252, 209);
     padding:0 10px 0 120px;
     position:relative;
     right:100px;
     z-index:0;
-    border-radius: 0 15px 15px 0;
+    border-radius: 15px 15px 15px 15px;
     width:100%;
+    justify-content: space-evenly;
 }
 .tarjeta-texto2{
     /*     font-family: 'Fredoka', sans-serif; */
     display:flex;
     flex-flow:column nowrap;
-    height:80%;
+    height:90%;
     align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
     background-color: rgb(124, 252, 209);
-    padding:0 120px 0 10px;
+    padding:0 120px 0 30px;
     position:relative;
     left:100px;
     z-index:0;
-    border-radius: 15px 0 0 15px;
+    border-radius: 15px 15px 15px 15px;
     width:100%;
+    justify-content: space-evenly;
+}
+.tarjeta-texto1 h3, .tarjeta-texto2 h3{
+    font-weight: 900;
 }
 .banda-tienda{
     display:flex;
@@ -363,21 +400,17 @@ main{
     flex-direction: column;
     border-radius: 5px;
 }
-.banda-tienda__casillas_item img{
-    height:400px;
-    width:400px;
+.banda-tienda__casillas .card{
+    border: 3px solid #000;
+    border-radius: 5px;
+    width: 20rem;
 }
-.banda-tienda__casillas_item__texto{
-    display:flex;
-    flex-direction: column;
-
-}
-.banda-tienda__casillas_item__texto h4{
+.banda-tienda__casillas .card h4{
     font-size:20px;
     display:flex;
     justify-content: center;
 }
-.banda-tienda__casillas_item__texto p{
+.banda-tienda__casillas .card p{
     font-size:20px;
     display:flex;
     justify-content: center;
@@ -511,9 +544,24 @@ main{
 
 /* SECCION RESPONSIVE */
 
+.banda-wikiplantas2{
+    display:none;
+}
+.banda-intro__1200px{
+    display:none;
+}
+.infografias-bootstrap{
+    display:none;
+}
 .click-menu{
     visibility:hidden;
 
+}
+#carousel-tienda{
+    display:none;
+}
+.banda-tienda{
+    padding-bottom: 200px;
 }
 
 /* MEDIA QUERIES */
@@ -531,20 +579,88 @@ main{
         height:300px;
         width:300px;
         /* background-color:rgb(255, 255, 255); */
-
+    }
+    .tarjeta-texto1 p, .tarjeta-texto2 p {
+        font-size: 12px;
+    }
+    .banda-intro__iconos{
+        flex-wrap:wrap;
     }
 }
 @media screen and (max-width:1200px){
-    .tarjeta-imagen img{
-        height:250px;
-        width:250px;
-        /* background-color:rgb(255, 255, 255); */
-
+    .banda-intro__1200px{
+        display:initial;
     }
-
+    .banda-intro{
+        display:none;
+    }
+    .banda-wikiplantas2{
+        display:flex;
+        width:100%;
+        margin:auto;
+        display:flex;
+        background-color:rgb(124, 252, 209);
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        font-family: 'Fredoka', sans-serif;
+        padding:50px;
+        row-gap: 50px;
+    }
+    .infografias-bootstrap{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width:70%;
+        row-gap: 10px;
+        background-color:rgb(255, 255, 255);
+        padding: 20px 0 20px 0;
+        border-radius: 20px;
+    }
+    .infografias-bootstrap h3{
+        font-weight: 900;
+        font-size: 25px;
+    }
+    .infografias-bootstrap__card{
+        display:flex;
+        flex-direction: column;
+        background-color: rgb(255, 255, 255);
+        width:90%;
+        align-items: center;
+        border: solid 10px rgb(124, 252, 209);   
+        border-radius: 10px;     
+    }
+    .infografias-bootstrap__card__titulo{
+        border-bottom: solid 10px rgb(124, 252, 209);
+        width:100%;
+        text-align: center;
+    }
+    .infografias-bootstrap__card img{
+        height:300px;
+        width:300px;
+    }
+    .infografias-bootstrap__card .accordion{
+        width:100%;
+    }
+    .infografias{
+        display:none;
+    }
+    .banda-tienda__casillas .card{
+        border: 3px solid #000;
+        border-radius: 5px;
+        width: 15rem;
+    }
+    .banda-tienda__casillas .card h4{
+        font-size:16px;
+        display:flex;
+        justify-content: center;
+    }
+    .banda-tienda__casillas .card p{
+        font-size:16px;
+        display:flex;
+        justify-content: center;
+    }
 }
-
-
 @media screen and (max-width:992px){ 
     .texto-imagen{
         display:flex;
@@ -621,6 +737,57 @@ main{
     .miniaturas-items p{
         font-size: 24px;
     }
+    #carousel-tienda{
+        display:contents;
+    }
+    .banda-tienda{
+        display:flex;
+        row-gap: 20px;
+        padding: 100px 0 100px 0;
+    }
+    .banda-tienda__casillas .card{
+        display:none;
+    }
+    .carousel-control-prev,.carousel-control-next{
+        position:relative;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/proyecto/imagenes/arrow_left.png);
+    }
+    .carousel-control-next-icon {
+        background-image: url(/proyecto/imagenes/arrow_right.png);
+    }
+    #carousel-tienda .carousel-indicators{
+        position:relative;
+        top:110%;
+        flex-wrap: wrap;
+    }
+    #carousel-tienda .carousel-indicators [data-bs-target] {
+        background-color: rgb(255, 255, 255);
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card{
+        display:contents;
+        border: 3px solid #000;
+        border-radius: 5px;
+        /* width: 10rem; */
+    }
+    #carousel-tienda .carousel-control-next-icon, .carousel-control-prev-icon{
+        width:4rem;
+        height:4rem;
+    }
+    #carousel-tienda .carousel-inner {
+        width:70%;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card h4{
+        font-size:25px;
+        display:flex;
+        justify-content: center;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card p{
+        font-size:25px;
+        display:flex;
+        justify-content: center;
+    }
     #pie-pagina{
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -684,6 +851,13 @@ main{
         grid-row:5/6;
     }
 }
+@media screen and (max-width: 650px){
+    .infografias-bootstrap__card img{
+        width:250px;
+        height: 250px;
+    }
+
+}
 @media screen and (max-width: 576px){
     #header .menu{
         margin: 20px 0 20px 0;
@@ -696,6 +870,20 @@ main{
     }
     .texto-imagen .texto-imagen__texto p{
         font-size: 14px;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card h4{
+        font-size:20px;
+        display:flex;
+        justify-content: center;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card p{
+        font-size:20px;
+        display:flex;
+        justify-content: center;
+    }
+    .infografias-bootstrap__card img{
+        width:200px;
+        height: 200px;
     }
 }
 
@@ -728,5 +916,9 @@ main{
     aside {
         justify-content: center;
 
+    }
+    .infografias-bootstrap__card img{
+        width:150px;
+        height: 150px;
     }
 }
