@@ -788,6 +788,9 @@ nav{
         display:flex;
         justify-content: center;
     }
+    .infografias-bootstrap{
+        width:100%; /* banda de página wikiplantas (padre es wikiplantas2) */
+    }
     #pie-pagina{
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -920,5 +923,8 @@ nav{
     .infografias-bootstrap__card img{
         width:150px;
         height: 150px;
+    }
+    .infografias-bootstrap__card{
+
     }
 }
