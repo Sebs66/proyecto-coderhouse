@@ -12,25 +12,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css"> <!-- ultimo link por lectura en cascada -->
 
 </head>
 <body class="font">
-    <!-- Header -->
     <header id="header"> <!-- Area de encabezado, contiene el menu, banner y logo -->
         <div class="banner"></div> <!-- banner manegado desde css -->
-        <div class="menu">        <!-- inicio Menú de navegación -->
-            <div class="titulo leaf"><h1 ><a href="../index.html"> Casa Plantas </a></h1></div>
-            <nav>
-                   <!--  <div class="click-menu leaf"><p>Menú</p></div> -->
-                    <div class="leaf"><a href="../index.html" > Inicio </a></div>
-                    <div class="leaf"><a href="./quienes_somos.html"> Quienes somos</a></div>
-                    <div class="leaf"><a href="./wikiplantas.html" > Wikiplantas</a></div>
-                    <div class="leaf"><a href="./tienda.html" > Tienda</a></div>
-                    <div class="leaf"><a href="./contacto.html" > Contacto</a></div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <div class="leaf"><a class="navbar-brand" href="../index.html">Casa Plantas</a></div>
+                  
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link active" aria-current="page" href="../index.html" ><p>Inicio</p> </a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./quienes_somos.html"> Quienes somos</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./wikiplantas.html" > Wikiplantas</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./tienda.html" > Tienda</a></div>
+                      </li>
+                      <li class="nav-item">
+                          <div class="leaf"><a class="nav-link" href="./contacto.html" > Contacto</a></div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
             </nav>
-        </div>  <!-- final Menú de navegación -->
-
     </header> <!-- fin del header -->
 
 
@@ -40,7 +56,7 @@
                 <h2>Wikiplantas</h2>
                 <p>En este espacio encontrarás información para brindarles el mejor cuidado a tus plantas.</p>
                 <div class="banda-intro__iconos">
-                    <a href="#monstera">
+                    <a href="#monstera-deliciosa">
                         <img src="../imagenes/monstera-deliciosa.png" alt="monstera" >
                     </a>
                     <a href="#monstera-adansonii">
@@ -49,8 +65,8 @@
                     <a href="#sansevieria">
                         <img src="../imagenes/sansevieria-2.png" alt="sansevieria">
                     </a>
-                    <a href="#philodendro-paraguayo2">
-                        <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo2">
+                    <a href="#philodendro-paraguayo">
+                        <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo">
                     </a>
                     <a href="#ficus-lyrata">
                         <img src="../imagenes/ficus-lyrata.jpg" alt="Ficus Lyrata">
@@ -79,18 +95,61 @@
 
                 </div>
             </div>
+            <div class="banda-intro__1200px"> <!-- Duplicamos banda para reemplazar en caso de pantalla de 1200px, actualizamos los ID para que funcione. -->
+                <h2>Wikiplantas</h2>
+                <p>En este espacio encontrarás información para brindarles el mejor cuidado a tus plantas.</p>
+                <div class="banda-intro__iconos">
+                    <a href="#card_deliciosa">
+                        <img src="../imagenes/monstera-deliciosa.png" alt="monstera" >
+                    </a>
+                    <a href="#card_adansonii">
+                        <img src="../imagenes/monstera-adansonii.jpg" alt="monstera-adansonii">
+                    </a>
+                    <a href="#card_sansevieria">
+                        <img src="../imagenes/sansevieria-2.png" alt="sansevieria">
+                    </a>
+                    <a href="#card_philodendro-paraguayo">
+                        <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo">
+                    </a>
+                    <a href="#card_ficuslyrata">
+                        <img src="../imagenes/ficus-lyrata.jpg" alt="Ficus Lyrata">
+                    </a>
+                    <a href="#card_ficus-benjamina">
+                        <img src="../imagenes/ficus-benjamina.jpg" alt="ficus-benjamina">
+                    </a>
+                    <a href="#card_peperomia-cucharita">
+                        <img src="../imagenes/peperomia-cucharita.jpg" alt="peperomia-cucharita">
+                    </a>
+                    <a href="#card_peperomia-argyreia">
+                        <img src="../imagenes/peperomia-argyreia.jpeg" alt="peperomia-argyreia">
+                    </a>
+                    <a href="#card_peperomia-caperata">
+                        <img src="../imagenes/peperomia-caperata.jpg" alt="peperomia-caperata">
+                    </a>
+                    <a href="#card_neanthe-bella">
+                        <img src="../imagenes/neanthe-bella.jpg" alt="neanthe-bella">
+                    </a>
+                    <a href="#card_Longifolio">
+                        <img src="../imagenes/longifolio.jpg" alt="Longifolio">
+                    </a>
+                    <a href="#card_maranta-lubbersiana">
+                        <img src="../imagenes/maranta-lubbersiana.png" alt="maranta-lubbersiana">
+                    </a>
+
+                </div>
+            </div>
             <div class="infografias"> <!-- todas las bandas con la imagen y el texto -->
 
-                <div class="tarjeta1" id="monstera">  <!-- Cada tarjeta individual, con una imagen y un texto -->
+                <div class="tarjeta1" id="monstera-deliciosa">  <!-- Cada tarjeta individual, con una imagen y un texto -->
                     <div class="tarjeta-imagen"> <!-- la imagen de la tarjeta -->
                         <img src="../imagenes/monstera-deliciosa.png" alt="monstera" >
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
                         <h3>Monstera Deliciosa</h3>
-                        <p > 
-                            TARJETA 1
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p> La Monstera deliciosa, también llamada costilla de Adán, es de las plantas de interior más populares en decoración de interiores gracias a sus bonitas y grandes hojas, que parecen simular un costillar.</p>
+                        <p><strong>Temperatura:</strong> No soporta las temperaturas muy bajas. Puede soportar temporadas de frío de corta duración e intensidad, pero las temperaturas por debajo de los 0 ºC acaban con la planta.</p>
+                        <p><strong>Luz:</strong> Necesitan poca luz, lo que quiere decir que en interior, será suficiente con colocarla en alguna habitación iluminada. En exterior, en cambio, es necesario ubicar la Monstera deliciosa a la sombra, ya que no tolera la exposición directa al sol durante muchas horas.</p>
+                        <p><strong>Riego:</strong> No necesita grandes cantidades de riego, ya que en su hábitat natural tiende a estar resguardada. Habitualmente será necesario un único riego semanal en los meses fríos, y hasta dos en los cálidos, especialmente en ambientes muy secos o calurosos. Es importante dejar que la tierra drene adecuadamente tras cada riego, asegurándonos de que no queda agua encharcada ni acumulada en el plato o en la maceta.</p>
                     </div>
                 </div>
                 <div class="tarjeta2" id="monstera-adansonii">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -98,11 +157,11 @@
                         <img src="../imagenes/monstera-adansonii.jpg" alt="monstera-adansonii">
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
-                        <h3>Monstera Adansonii</h3>
-                        <p > 
-                            TARJETA 2
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <h3>Monstera Adansonii</h3> 
+                        <p><strong>Temperatura:</strong> Se desarrollará bien siempre que la mantengas en torno a los 20 grados. En cuanto las temperaturas bajen de los 18 grados, corremos el riesgo de que pase frío lo que hará que su crecimiento se detenga y que incluso la planta pueda secarse por completo.</p>
+                        <p><strong>Luz:</strong> Necesita mucha claridad y luz indirecta ya que los rayos del sol pueden quemar sus hojas. Asegúrate de colocarla en un lugar donde reciba mucha iluminación sin que la luz directa llegue a alcanzarle.
+                        Por si te lo estás preguntando, también puede sobrevivir en lugares de sombra o con baja iluminación pero su crecimiento será bastante más lento, sus hojas más pequeñas y posiblemente nazcan sin sus característicos orificios. </p>
+                        <p><strong>Riego:</strong> Como es un planta tropical, necesita riegos abundantes en los meses de más calor y moderados durante el invierno. A la Monstera Adansonii le gusta mucho la humedad aunque no tanto estar encharcada. Por este motivo y también para evitar problemas de pudrición de raíces lo que hago es pulverizar la tierra para darle la humedad que necesita sin regarla en exceso.</p>
                     </div>
                 </div>
                 <div class="tarjeta1" id="sansevieria">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -111,22 +170,21 @@
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
                         <h3>Sansevieria</h3>
-                        <p > 
-                            TARJETA 3
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
+                        <p><strong>Temperatura:</strong> La sansevieria aguanta muy bien tanto temperaturas elevadas como bajas (hasta -5°C). la ideal está entre los 15 y los 20°C, aunque en verano puede aguantar bien temperaturas de 30º. Evita las corrientes de aire.</p>
+                        <p><strong>Luz:</strong> Aunque es muy resistente, lo ideal es colocarla en lugares con mucha luz porque, al ser de crecimiento lento (solo crea 3-4 hojas nuevas al año), las hojas no tendrán fuerza y les costará crecer rectas y erguidas.
                         </p>
+                        <p><strong>Riego:</strong> Si la quieres mantener vigorosa, no riegues en exceso y solo cuando la tierra esté seca. En invierno, solo necesita agua una o dos veces al mes, siempre dependiendo de la temperatura del ambiente interior. Debemos considerarla como una planta suculenta, de manera que solo hay que regarla cuando el sustrato esté seco. No le gustan los ambientes húmedos, así que es preferible evitar la pulverización o nebulización de agua.</p>
                     </div>
                 </div>
-                <div class="tarjeta2" id="philodendro-paraguayo2">  <!-- Cada tarjeta individual, con una imagen y un texto -->
+                <div class="tarjeta2" id="philodendro-paraguayo">  <!-- Cada tarjeta individual, con una imagen y un texto -->
                     <div class="tarjeta-imagen"> <!-- la imagen de la tarjeta -->
-                        <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo2">
+                        <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo">
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
                         <h3>Philodendro Paraguayo</h3>
-                        <p > 
-                            TARJETA 4
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p><strong>Temperatura:</strong> Mínima en invierno 10ºC para Philodendron. En verano a más de 24ºC se le debe proporcionar humedad constante.</p>
+                        <p><strong>Luz:</strong> Necesita estar en un lugar muy bien iluminado pero en el que no reciba la luz del sol de forma directa. De hecho, le van muy bien las zonas algo sombrías o con luz artificial.</p>
+                        <p><strong>Riego:</strong> Conviene regar bien estas plantas cada 4 días con agua sin cal durante la primavera y el verano e ir reduciendo un poco los riegos hacia el invierno. También es importante rociar las hojas cada 2 días.</p>
                     </div>
                 </div>
                 <div class="tarjeta1" id="ficus-lyrata">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -135,10 +193,9 @@
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
                         <h3>Ficus Lyrata</h3>
-                        <p > 
-                            TARJETA 5
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p><strong>Temperatura:</strong> Debido a su origen, esta planta necesita de temperaturas altas o cálidas para desarrollarse adecuadamente. Lo ideal es que la temperatura sea de alrededor de 20 ºC para este ficus, pues exponerlo a temperaturas por debajo de los 15 ºC acabará por matar a la planta. </p>
+                        <p><strong>Luz:</strong> La iluminación es uno de los grandes requisitos de esta planta y, probablemente, el más importante. El ficus lira precisa de recibir una gran cantidad de luz, pero eso sí, de forma indirecta. La incidencia directa de el sol fuerte tiende a quemar sus hojas, así que es conveniente ubicarlo en una zona muy iluminada pero lejos de las ventanas o bien, tras las cortinas en interior o en semisombra en exterior. Es especialmente importante que la planta recoja luz en su parte superior.</p>
+                        <p><strong>Riego:</strong> Regar un Ficus lyrata no es complicado, simplemente es necesario mantener el sustrato húmedo la mayor parte del tiempo, aportándole así un entorno de humedad parecido al tropical. Eso sí, es muy importante que no riegues nunca hasta encharcar ni a dejar que se seque del todo su tierra, evitándole a la planta sufrir estrés hídrico. En los meses fríos, espacia un poco los riegos hasta una vez por semana aproximadamente.</p>
                     </div>
                 </div>
                 <div class="tarjeta2" id="ficus-benjamina">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -147,10 +204,9 @@
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
                         <h3> Ficus Benjamina</h3>
-                        <p > 
-                            TARJETA 6
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p ><strong>Temperatura:</strong> En exterior no soporta las bajas temperaturas, en zonas templadas se aclimata a la perfección. En los lugares donde la temperatura invernal es más baja, os recomendamos cubrir los ficus con un manto térmico especial para plantas.</p>
+                        <p><strong>Luz:</strong> Es una planta que necesita abundante luz, por lo que deberá ser ubicada en un lugar del jardín soleado o cerca de ventanas con acceso directo a la luz del sol. De todos modos, tampoco le conviene luz directa del sol durante muchas horas seguidas.</p>
+                        <p><strong>Riego:</strong> El ficus benjamina es una planta que necesita riesgos constantes debido a su alta transpiración. Esto hace que el sustrato tienda a secarse con facilidad, lo que puede conllevar la caída de las hojas. Por ello, de forma especial durante los meses de primavera y verano, se recomienda aumentar el riego para asegurarse de que el sustrato nunca está completamente seco. No obstante, en el caso de estar en una maceta, es importante evitar la acumulación de exceso de agua en el plato, ya que podría afectar negativamente a las raíces.</p>
                     </div>
                 </div>
                 <div class="tarjeta1" id="peperomia-cucharita">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -159,10 +215,12 @@
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
                         <h3> Peperomia Cucharita</h3>
-                        <p > 
-                            TARJETA 7
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p><strong>Temperatura:</strong> Su temperatura ideal está entre los 13º y los 26º. Puede soportar temperaturas más altas pero notaremos las consecuencias del calor excesivo en sus hojas que pueden ponerse algo mustias. Para contrarrestar los efectos de las altas temperaturas, trata de aumentar la humedad ambiental pulverizando la planta o recurriendo a humidificadores.</p>
+                        <p>De la misma forma que no soporta las altas temperaturas, tampoco tolera el frío. Las temperaturas por debajo de los 10 grados pueden provocar daños irreversibles para la planta como que deje de crecer o se caigan sus hojas.</p>                           
+                        <p><strong>Luz:</strong> Necesita recibir mucha luz indirecta para mantenerse sana y fuerte. Elegir la ubicación adecuada es el gran secreto para el correcto crecimiento y desarrollo de la Peperomia.</p>
+                        <p>Dar con la ubicación adecuada es fundamental para que nuestra planta se encuentre sana y feliz. Prefiere los lugares bien iluminados, sin sol directo, ya que este quemaría sus hojas y las perdería.</p>
+
+                        <p><strong>Riego:</strong> Siempre ten en cuenta que su sustrato esté seco unos centímetros de profundidad entre los riegos.</p>
                     </div>
                 </div>
                 <div class="tarjeta2" id="peperomia-argyreia">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -170,11 +228,10 @@
                         <img src="../imagenes/peperomia-argyreia.jpeg" alt="peperomia-argyreia">
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
-                        <h3> Peperomia Argyreia</h3>
-                        <p > 
-                            TARJETA 8
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <h3>Peperomia Argyreia</h3>
+                        <p><strong>Temperatura:</strong> Crece muy bien en climas frescos o cálidos pero es muy susceptible a temperaturas inferiores a los 15⁰C. También puede ser afectada su salud si las temperaturas sobrepasan los 38⁰C provocándole deshidratación. Si las temperaturas se mantienen entre los 15-17⁰C durante mucho tiempo, el crecimiento se verá enlentecido o frenado por completo.</p>
+                        <p><strong>Luz:</strong> Necesita mucha luz para crecer y florecer al 100%. Nunca debe exponerse directamente al sol porque sufrirá quemaduras y deshidratación acelerada; lo más recomendado en cultivarla a semisombra.</p>
+                        <p><strong>Riego:</strong> Regar moderadamente con agua sin cal esperando que el sustrato esté casi seco a razón de una vez por semana en primavera y en verano; en invierno y en otoño regar cada 2 semanas. Necesitan alta humedad ambiental: colocar un plato con guijarros húmedos bajo la maceta y rociar frecuentemente las hojas con agua sin cal en primavera y en verano.</p>
                     </div>
                 </div>
                 <div class="tarjeta1" id="peperomia-caperata">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -182,11 +239,11 @@
                         <img src="../imagenes/peperomia-caperata.jpg" alt="peperomia-caperata">
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
-                        <h3> Peperomia Caperata</h3>
-                        <p > 
-                            TARJETA 9
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <h3>Peperomia Caperata</h3>
+                        <p><strong>Temperatura:</strong> La peperomia se desarrolla en ambientes cálidos con buena luminosidad, húmedos y protegidos del solar directo. No tolera temperaturas inferiores a los 10 °C y difícilmente crece con temperaturas superiores a los 24 °C.</p>
+                        <p><strong>Luz:</strong> Como la Peperomia caperata se encuentra de forma natural en las selvas tropicales, es una buena idea imitar (al menos en parte) estas condiciones en tu casa. La luz solar directa quedaría naturalmente bloqueada por los árboles más grandes, por lo cual no es ideal dejar la planta a pleno sol. Necesita mucha luz indirecta.</p>
+                        <p> También hay otra opción: La Peperomia caperata es conocida por crecer muy bien bajo luz artificial, lo que significa que es una buena opción para las habitaciones más oscuras.</p>
+                        <p><strong>Riego:</strong> El riego de una Peperomia caperata no es abundante, sino que debes echarle poca cantidad. Esto debido a que esta planta tiene tanto las hojas como los pedúnculos como si fuera una suculenta, lo que implica que puede almacenar agua. Por eso, si no ves que tenga la tierra seca, o veas a la planta apagada, es mejor no regarla.</p>
                     </div>
                 </div>
                 <div class="tarjeta2" id="neanthe-bella">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -194,11 +251,10 @@
                         <img src="../imagenes/neanthe-bella.jpg" alt="neanthe-bella">
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
-                        <h3> Neanthe Bella</h3>
-                        <p > 
-                            TARJETA 10
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <h3>Neanthe Bella</h3>
+                        <p><strong>Temperatura:</strong> Su temperatura ideal esta entre los 14º y 24º grados. Cuando hace mucho calor es bueno rociar sus hojas con un pulverizador.</p>
+                        <p><strong>Luz:</strong> Prospera en una variedad de configuraciones de iluminación interior, pero es mejor un área con luz media a brillante. En condiciones de poca luz, Neanthe Bella Palm produce hojas de color verde oscuro y se puede conservar muy bien con la iluminación que obtendrá en casi todas las oficinas o casas. Estas pequeñas palmeras no pueden soportar el contacto con la luz solar directa.</p>
+                        <p><strong>Riego:</strong> Regarla poco es más seguro que regarla en exceso. Espere a que la superficie del sustrato este seco antes de volver a regar. Es una planta tolerante si se te olvida regarla por un tiempo. Asegúrese de reducir el riego cuando la luz o la temperatura sean bajas porque, en esas circunstancias, estas palmeras no necesitan tanta agua.</p>
                     </div>
                 </div>
                 <div class="tarjeta1" id="longifolio">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -206,11 +262,10 @@
                         <img src="../imagenes/longifolio.jpg" alt="Longifolio">
                     </div>
                     <div class="tarjeta-texto1"> <!-- el texto de la tarjeta -->
-                        <h3> Longifolio</h3>
-                        <p > 
-                            TARJETA 11
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <h3>Longifolio</h3>
+                        <p><strong>Temperatura:</strong> Estas plantas son es muy fuertes, y podrán resistir bajas temperaturas, aunque no sea lo ideal para ellas. Su rango de temperatura ideal está entre los 14º y los 28º.</p>
+                        <p><strong>Luz:</strong> No es específicamente exigente en términos de luz, podría incluso estár en lugares sin luz natural. Solo no le gusta estar expuesto a sol directo, pero sí podría estar en lugares con sol intermitente, semi sombra, o también, en lugares más sombríos.</p>
+                        <p><strong>Riego:</strong> La frecuencia de riego dependerá de la luz que recibe, si esta en lugares con poca luz natural o sombríos, debes regarlo con menos constancia. Pero si esta en lugares donde recibe más luz hay que aumentar la frecuencia a dos veces por semana en verano, y una cada dos semanas en invierno.</p>
                     </div>
                 </div>
                 <div class="tarjeta2" id="maranta-lubbersiana">  <!-- Cada tarjeta individual, con una imagen y un texto -->
@@ -219,20 +274,557 @@
                     </div>
                     <div class="tarjeta-texto2"> <!-- el texto de la tarjeta -->
                         <h3> Maranta Lubbersiana</h3>
-                        <p > 
-                            TARJETA 12
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore deserunt eos alias, aspernatur quam ipsam sed voluptatem soluta, tempora est recusandae odit neque, dolore doloremque culpa sint dolor repudiandae quibusdam. Doloremque maiores obcaecati, quia magnam nemo nesciunt sint earum aliquam laudantium, tempore similique et veniam consequatur quod delectus reiciendis dolore?
-                        </p>
+                        <p><strong>Temperatura:</strong> La Maranta prefiere temperaturas altas, en torno a los 20 y 28ºC, aunque también puede crecer fácilmente entre los 17 y 35ºC. Cuidado con bajar de los 5ºC, ya que no le vendrá nada bien. Las temperaturas del interior de casa son perfectas para ella.</p>
+                        <p><strong>Luz:</strong> Se adaptan a todo tipo de luz: rincones muy luminosos a espacios con luz baja. En donde mejor se darán es en luz media. Debes cuidar que el sol directo no toque sus hojas.</p>
+                        <p><strong>Riego:</strong> Mantener el sustrato húmedo, esto en verano puede significar regar cada 3 días y en invierno una vez por semana aproximadamente. </p>
+
                     </div>
                 </div>
                 
             </div>
         </div>
+        <div class="banda-wikiplantas2">
+            <div class="infografias-bootstrap">
+                <div class="infografias-bootstrap__card" id="card_deliciosa">
+                    <img src="../imagenes/monstera-deliciosa.png" alt="monstera" >
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Monstera Deliciosa</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushDeliciosa">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-deliciosa" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-deliciosa" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushDeliciosa">
+                            <div class="accordion-body">
+                                <p>No soporta las temperaturas muy bajas. Puede soportar temporadas de frío de corta duración e intensidad, pero las temperaturas por debajo de los 0 ºC acaban con la planta.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-deliciosa" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-deliciosa" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushDeliciosa">
+                            <div class="accordion-body">
+                                <p>Necesitan poca luz, lo que quiere decir que en interior, será suficiente con colocarla en alguna habitación iluminada. En exterior, en cambio, es necesario ubicar la Monstera deliciosa a la sombra, ya que no tolera la exposición directa al sol durante muchas horas.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-deliciosa" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-deliciosa" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushAdansonii">
+                            <div class="accordion-body">
+                                <p>No necesita grandes cantidades de riego, ya que en su hábitat natural tiende a estar resguardada. Habitualmente será necesario un único riego semanal en los meses fríos, y hasta dos en los cálidos, especialmente en ambientes muy secos o calurosos. Es importante dejar que la tierra drene adecuadamente tras cada riego, asegurándonos de que no queda agua encharcada ni acumulada en el plato o en la maceta.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_adansonii">
+                    <img src="../imagenes/monstera-adansonii.jpg" alt="monstera-adansonii">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Monstera Adansonii</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushAdansonii">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-andasonii" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-andasonii" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushAdansonii">
+                            <div class="accordion-body">
+                                <p>Se desarrollará bien siempre que la mantengas en torno a los 20 grados. En cuanto las temperaturas bajen de los 18 grados, corremos el riesgo de que pase frío lo que hará que su crecimiento se detenga y que incluso la planta pueda secarse por completo.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-andasonii" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-andasonii" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushAdansonii">
+                            <div class="accordion-body">
+                                <p>Necesita mucha claridad y luz indirecta ya que los rayos del sol pueden quemar sus hojas. Asegúrate de colocarla en un lugar donde reciba mucha iluminación sin que la luz directa llegue a alcanzarle. <br>
+                                Por si te lo estás preguntando, también puede sobrevivir en lugares de sombra o con baja iluminación pero su crecimiento será bastante más lento, sus hojas más pequeñas y posiblemente nazcan sin sus característicos orificios. </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-andasonii" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-andasonii" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushAdansonii">
+                            <div class="accordion-body">
+                                <p>Como es un planta tropical, necesita riegos abundantes en los meses de más calor y moderados durante el invierno. A la Monstera Adansonii le gusta mucho la humedad aunque no tanto estar encharcada. Por este motivo y también para evitar problemas de pudrición de raíces lo que hago es pulverizar la tierra para darle la humedad que necesita sin regarla en exceso.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_sansevieria">
+                    <img src="../imagenes/sansevieria-2.png" alt="sansevieria">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Monstera Adansonii</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushSansevieria">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-sansevieria" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-sansevieria" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushSansevieria">
+                            <div class="accordion-body">
+                                <p>sLa sansevieria aguanta muy bien tanto temperaturas elevadas como bajas (hasta -5°C). la ideal está entre los 15 y los 20°C, aunque en verano puede aguantar bien temperaturas de 30º. Evita las corrientes de aire.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-sansevieria" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-sansevieria" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushSansevieria">
+                            <div class="accordion-body">
+                                <p>Aunque es muy resistente, lo ideal es colocarla en lugares con mucha luz porque, al ser de crecimiento lento (solo crea 3-4 hojas nuevas al año), las hojas no tendrán fuerza y les costará crecer rectas y erguidas.
+                                </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-sansevieria" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-sansevieria" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushSansevieria">
+                            <div class="accordion-body">
+                                <p>Si la quieres mantener vigorosa, no riegues en exceso y solo cuando la tierra esté seca. En invierno, solo necesita agua una o dos veces al mes, siempre dependiendo de la temperatura del ambiente interior. Debemos considerarla como una planta suculenta, de manera que solo hay que regarla cuando el sustrato esté seco. No le gustan los ambientes húmedos, así que es preferible evitar la pulverización o nebulización de agua.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_philodendro-paraguayo">
+                    <img src="../imagenes/philodendro-paraguayo2.png" alt="philodendro-paraguayo">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Philodendro Paraguayo</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-philodendro-paraguayo">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-philodendro-paraguayo" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-philodendro-paraguayo" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush-philodendro-paraguayo">
+                            <div class="accordion-body">
+                                <p>Mínima en invierno 10ºC para Philodendron. En verano a más de 24ºC se le debe proporcionar humedad constante.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-philodendro-paraguayo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-philodendro-paraguayo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-philodendro-paraguayo">
+                            <div class="accordion-body">
+                                <p>Necesita estar en un lugar muy bien iluminado pero en el que no reciba la luz del sol de forma directa. De hecho, le van muy bien las zonas algo sombrías o con luz artificial.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-philodendro-paraguayo" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-philodendro-paraguayo" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-philodendro-paraguayo">
+                            <div class="accordion-body">
+                                <p>Conviene regar bien estas plantas cada 4 días con agua sin cal durante la primavera y el verano e ir reduciendo un poco los riegos hacia el invierno. También es importante rociar las hojas cada 2 días.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_ficuslyrata">
+                    <img src="../imagenes/ficus-lyrata.jpg" alt="Ficus Lyrata">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Ficus Lyrata</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-ficuslyrata">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-ficuslyrata" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-ficuslyrata" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush-ficuslyrata">
+                            <div class="accordion-body">
+                                <p>Debido a su origen, esta planta necesita de temperaturas altas o cálidas para desarrollarse adecuadamente. Lo ideal es que la temperatura sea de alrededor de 20 ºC para este ficus, pues exponerlo a temperaturas por debajo de los 15 ºC acabará por matar a la planta. </p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-ficuslyrata" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-ficuslyrata" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-ficuslyrata">
+                            <div class="accordion-body">
+                                <p>La iluminación es uno de los grandes requisitos de esta planta y, probablemente, el más importante. El ficus lira precisa de recibir una gran cantidad de luz, pero eso sí, de forma indirecta. La incidencia directa de el sol fuerte tiende a quemar sus hojas, así que es conveniente ubicarlo en una zona muy iluminada pero lejos de las ventanas o bien, tras las cortinas en interior o en semisombra en exterior. Es especialmente importante que la planta recoja luz en su parte superior.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-ficuslyrata" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-ficuslyrata" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-ficuslyrata">
+                            <div class="accordion-body">
+                                <p>Regar un Ficus lyrata no es complicado, simplemente es necesario mantener el sustrato húmedo la mayor parte del tiempo, aportándole así un entorno de humedad parecido al tropical. Eso sí, es muy importante que no riegues nunca hasta encharcar ni a dejar que se seque del todo su tierra, evitándole a la planta sufrir estrés hídrico. En los meses fríos, espacia un poco los riegos hasta una vez por semana aproximadamente.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_ficus-benjamina">
+                    <img src="../imagenes/ficus-benjamina.jpg" alt="ficus-benjamina">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Ficus Lyrata</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-ficus-benjamina">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-ficus-benjamina" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-ficus-benjamina" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushficus-benjamina">
+                            <div class="accordion-body">
+                                <p>En exterior no soporta las bajas temperaturas, en zonas templadas se aclimata a la perfección. En los lugares donde la temperatura invernal es más baja, os recomendamos cubrir los ficus con un manto térmico especial para plantas.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-ficus-benjamina" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-ficus-benjamina" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-ficus-benjamina">
+                            <div class="accordion-body">
+                                <p>Es una planta que necesita abundante luz, por lo que deberá ser ubicada en un lugar del jardín soleado o cerca de ventanas con acceso directo a la luz del sol. De todos modos, tampoco le conviene luz directa del sol durante muchas horas seguidas.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-ficus-benjamina" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-ficus-benjamina" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-ficus-benjamina">
+                            <div class="accordion-body">
+                                <p>El ficus benjamina es una planta que necesita riesgos constantes debido a su alta transpiración. Esto hace que el sustrato tienda a secarse con facilidad, lo que puede conllevar la caída de las hojas. Por ello, de forma especial durante los meses de primavera y verano, se recomienda aumentar el riego para asegurarse de que el sustrato nunca está completamente seco. No obstante, en el caso de estar en una maceta, es importante evitar la acumulación de exceso de agua en el plato, ya que podría afectar negativamente a las raíces.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_peperomia-cucharita">
+                    <img src="../imagenes/peperomia-cucharita.jpg" alt="peperomia-cucharita">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Peperomia Cucharita</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-peperomia-cucharita">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-peperomia-cucharita" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-peperomia-cucharita" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushpeperomia-cucharita">
+                            <div class="accordion-body">
+                                <p>Su temperatura ideal está entre los 13º y los 26º. Puede soportar temperaturas más altas pero notaremos las consecuencias del calor excesivo en sus hojas que pueden ponerse algo mustias. Para contrarrestar los efectos de las altas temperaturas, trata de aumentar la humedad ambiental pulverizando la planta o recurriendo a humidificadores.</p>
+                                <p>De la misma forma que no soporta las altas temperaturas, tampoco tolera el frío. Las temperaturas por debajo de los 10 grados pueden provocar daños irreversibles para la planta como que deje de crecer o se caigan sus hojas.</p>  
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-peperomia-cucharita" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-peperomia-cucharita" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-peperomia-cucharita">
+                            <div class="accordion-body">
+                                <p>Necesita recibir mucha luz indirecta para mantenerse sana y fuerte. Elegir la ubicación adecuada es el gran secreto para el correcto crecimiento y desarrollo de la Peperomia.</p>
+                                <p>Dar con la ubicación adecuada es fundamental para que nuestra planta se encuentre sana y feliz. Prefiere los lugares bien iluminados, sin sol directo, ya que este quemaría sus hojas y las perdería.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-peperomia-cucharita" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-peperomia-cucharita" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-peperomia-cucharita">
+                            <div class="accordion-body">
+                                <p>Siempre ten en cuenta que su sustrato esté seco unos centímetros de profundidad entre los riegos.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_peperomia-argyreia">
+                    <img src="../imagenes/peperomia-argyreia.jpeg" alt="peperomia-argyreia">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Peperomia Argyreia</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-peperomia-argyreia">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-peperomia-argyreia" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-peperomia-argyreia" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushpeperomia-argyreia">
+                            <div class="accordion-body">
+                                <p>Crece muy bien en climas frescos o cálidos pero es muy susceptible a temperaturas inferiores a los 15⁰C. También puede ser afectada su salud si las temperaturas sobrepasan los 38⁰C provocándole deshidratación. Si las temperaturas se mantienen entre los 15-17⁰C durante mucho tiempo, el crecimiento se verá enlentecido o frenado por completo.</p> 
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-peperomia-argyreia" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-peperomia-argyreia" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-peperomia-argyreia">
+                            <div class="accordion-body">
+                                <p>Necesita mucha luz para crecer y florecer al 100%. Nunca debe exponerse directamente al sol porque sufrirá quemaduras y deshidratación acelerada; lo más recomendado en cultivarla a semisombra.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-peperomia-argyreia" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-peperomia-argyreia" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-peperomia-argyreia">
+                            <div class="accordion-body">
+                                <p>Regar moderadamente con agua sin cal esperando que el sustrato esté casi seco a razón de una vez por semana en primavera y en verano; en invierno y en otoño regar cada 2 semanas. Necesitan alta humedad ambiental: colocar un plato con guijarros húmedos bajo la maceta y rociar frecuentemente las hojas con agua sin cal en primavera y en verano.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_peperomia-caperata">
+                    <img src="../imagenes/peperomia-caperata.jpg" alt="peperomia-caperata">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Peperomia Caperata</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-peperomia-caperata">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-peperomia-caperata" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-peperomia-caperata" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushpeperomia-caperata">
+                            <div class="accordion-body">
+                                <p>La peperomia se desarrolla en ambientes cálidos con buena luminosidad, húmedos y protegidos del solar directo. No tolera temperaturas inferiores a los 10 °C y difícilmente crece con temperaturas superiores a los 24 °C.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-peperomia-caperata" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-peperomia-caperata" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-peperomia-caperata">
+                            <div class="accordion-body">
+                                <p>Como la Peperomia caperata se encuentra de forma natural en las selvas tropicales, es una buena idea imitar (al menos en parte) estas condiciones en tu casa. La luz solar directa quedaría naturalmente bloqueada por los árboles más grandes, por lo cual no es ideal dejar la planta a pleno sol. Necesita mucha luz indirecta.</p>
+                                <p> También hay otra opción: La Peperomia caperata es conocida por crecer muy bien bajo luz artificial, lo que significa que es una buena opción para las habitaciones más oscuras.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-peperomia-caperata" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-peperomia-caperata" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-peperomia-caperatas">
+                            <div class="accordion-body">
+                                <p>El riego de una Peperomia caperata no es abundante, sino que debes echarle poca cantidad. Esto debido a que esta planta tiene tanto las hojas como los pedúnculos como si fuera una suculenta, lo que implica que puede almacenar agua. Por eso, si no ves que tenga la tierra seca, o veas a la planta apagada, es mejor no regarla.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_neanthe-bella">
+                    <img src="../imagenes/neanthe-bella.jpg" alt="neanthe-bella">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Neanthe Bella</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-neanthe-bella">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-neanthe-bella" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-neanthe-bella" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushneanthe-bella">
+                            <div class="accordion-body">
+                                <p>Su temperatura ideal esta entre los 14º y 24º grados. Cuando hace mucho calor es bueno rociar sus hojas con un pulverizador.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-neanthe-bella" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-neanthe-bella" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-neanthe-bella">
+                            <div class="accordion-body">
+                                <p>Prospera en una variedad de configuraciones de iluminación interior, pero es mejor un área con luz media a brillante. En condiciones de poca luz, Neanthe Bella Palm produce hojas de color verde oscuro y se puede conservar muy bien con la iluminación que obtendrá en casi todas las oficinas o casas. Estas pequeñas palmeras no pueden soportar el contacto con la luz solar directa.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-neanthe-bella" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-neanthe-bella" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-neanthe-bella">
+                            <div class="accordion-body">
+                                <p> Regarla poco es más seguro que regarla en exceso. Espere a que la superficie del sustrato este seco antes de volver a regar. Es una planta tolerante si se te olvida regarla por un tiempo. Asegúrese de reducir el riego cuando la luz o la temperatura sean bajas porque, en esas circunstancias, estas palmeras no necesitan tanta agua.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_Longifolio">
+                    <img src="../imagenes/longifolio.jpg" alt="Longifolio">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Longifolio</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-Longifolio">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-Longifolio" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-Longifolio" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush-Longifolio">
+                            <div class="accordion-body">
+                                <p>Estas plantas son es muy fuertes, y podrán resistir bajas temperaturas, aunque no sea lo ideal para ellas. Su rango de temperatura ideal está entre los 14º y los 28º.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-Longifolio" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-Longifolio" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-Longifolio">
+                            <div class="accordion-body">
+                                <p>No es específicamente exigente en términos de luz, podría incluso estár en lugares sin luz natural. Solo no le gusta estar expuesto a sol directo, pero sí podría estar en lugares con sol intermitente, semi sombra, o también, en lugares más sombríos.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-Longifolio" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-Longifolio" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-Longifolio">
+                            <div class="accordion-body">
+                                <p> La frecuencia de riego dependerá de la luz que recibe, si esta en lugares con poca luz natural o sombríos, debes regarlo con menos constancia. Pero si esta en lugares donde recibe más luz hay que aumentar la frecuencia a dos veces por semana en verano, y una cada dos semanas en invierno.</p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="infografias-bootstrap__card" id="card_maranta-lubbersiana">
+                    <img src="../imagenes/maranta-lubbersiana.png" alt="maranta-lubbersiana">
+                    <div class="infografias-bootstrap__card__titulo">
+                        <h3>Longifolio</h3>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlush-maranta-lubbersiana">
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne-maranta-lubbersiana" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <p>Temperatura</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne-maranta-lubbersiana" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlush-maranta-lubbersiana">
+                            <div class="accordion-body">
+                                <p>La Maranta prefiere temperaturas altas, en torno a los 20 y 28ºC, aunque también puede crecer fácilmente entre los 17 y 35ºC. Cuidado con bajar de los 5ºC, ya que no le vendrá nada bien. Las temperaturas del interior de casa son perfectas para ella.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo-maranta-lubbersiana" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <p>Luz</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo-maranta-lubbersiana" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlush-maranta-lubbersiana">
+                            <div class="accordion-body">
+                                <p>Se adaptan a todo tipo de luz: rincones muy luminosos a espacios con luz baja. En donde mejor se darán es en luz media. Debes cuidar que el sol directo no toque sus hojas.</p>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree-maranta-lubbersiana" aria-expanded="false" aria-controls="flush-collapseThree">
+                                <p>Riego</p>
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree-maranta-lubbersiana" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlush-maranta-lubbersiana">
+                            <div class="accordion-body">
+                                <p> Mantener el sustrato húmedo, esto en verano puede significar regar cada 3 días y en invierno una vez por semana aproximadamente. </p>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer id="pie-pagina"> <!-- Inicio footer -->
         <div>
-            <a href="../index.html" class="leaf"> Home </a>
-            <a href="#header" class="leaf"> Arriba</a>
+            <a href="../index.html" class="leaf_footer"> Home </a>
+            <a href="#header" class="leaf_footer"> Arriba</a>
         </div>
         <div class="planilla_footer">
             <h4>Horarios Tienda:</h4>
@@ -250,10 +842,9 @@
             <div class="banda_iconos">
                 <a href="https://www.instagram.com" target="_blank" title="instagram icons"><img src="../imagenes/instagram-logo.png" alt=""></a>
                 <a href="https://www.facebook.com" target="_blank" title="facebook icons"><img src="../imagenes/facebook-logo.png" alt=""></a>
-            </div>
+            </div>     
         </div>
-    </footer> <!-- Final footer -->
-
+    </footer> <!-- Final footer --> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 </body>
