@@ -553,16 +553,6 @@ nav{
 
 /* SECCION RESPONSIVE */
 
-<<<<<<< HEAD
-/* Los carouseles que estan hidden en el desktop */
-/* .banda-wikiplantas .banda-intro .carousel-iconos{
-     display:none;
-} */
-/* .banda-wikiplantas .banda-intro .carousel-iconos img{
-    width:100px;
-    height:100px;
-} */
-=======
 .banda-wikiplantas2{
     display:none;
 }
@@ -582,7 +572,6 @@ nav{
 .banda-tienda{
     padding-bottom: 200px;
 }
->>>>>>> bootstrap
 
 /* MEDIA QUERIES */
 @media screen and (max-width:1400px){ 
