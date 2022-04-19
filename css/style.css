@@ -1,943 +1,1394 @@
+@charset "UTF-8";
 /* reset browser styles */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-}
-body { 
-    background-color:rgb(255, 255, 255);
-    display:flex;
-    flex-direction: column;
-    min-width: 320px;
-    width:100%;
-}
-main{
-    margin-bottom: 50px;;
-}
-.bg-light{
-    background-color:rgb(2, 167, 29)!important;
-}
-.navbar-collapse{
-    flex-grow: inherit;
-}
-nav{
-    margin-bottom: 10px;
-    font-family: 'Fredoka', sans-serif;
-    font-weight: 900;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-.leaf {
-    background-color: rgb(151, 221, 45);
-    margin: 0px;
-    border-radius: 50px 0 50px 0;
-    padding: 10px 20px; 
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 320px;
+  width: 100%;
 }
 
-.leaf:hover {
-    background-color: rgba(96, 138, 33, 0.801);    
+#header .banner {
+  background-image: url(../imagenes/banner-wide.png);
+  height: 156px;
 }
 
-.leaf_footer {
-    background-color: rgb(151, 221, 45);
-    margin: 0px;
-    border-radius: 50px 0 50px 0;
-    padding: 0px 20px; 
-}
-.leaf_footer:hover {
-    background-color: rgba(96, 138, 33, 0.801);    
-}
-.banner {
-    background-image: url(../imagenes/banner-wide.png); 
-    height:156px;
-}
-.principal {
-    float:none;
-    font-family: 'Fredoka', sans-serif;
-    margin-bottom: 40px;
-    
-}
-.principal a {
-    text-decoration: none;  
-}
-.banda-miniaturas a {
-    text-decoration: none;
-    color: #000;
+#header nav {
+  margin-bottom: 10px;
+  font-weight: 900;
 }
 
-.font {
-    font-family: 'Fredoka', sans-serif;    
-}
-.foto1 {
-    position: relative;
-    width: 90%;
-    height:30rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /* position:fixed */
-    background-image: url(../imagenes/foto-plantas-wide.jpg);
-    background-position: center center;
-    background-repeat:no-repeat;
-    margin-bottom:40px; /* me separa el espacio luego la foto */
+#header nav .navbar-collapse {
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
 }
 
-.texto-imagen{
-    display:grid;
-    width: 90%;
-    margin:auto;
-    grid-template-columns: 1fr 1fr;
+#header nav .leaf {
+  background-color: #97dd2d;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 10px 20px;
 }
-.texto-imagen .texto-imagen__texto{
-    text-align:left;
-    margin: auto;
-    padding-right:5%;
-}
-.texto-imagen .texto-imagen__texto a{
-    color:rgb(17, 41, 14);
-}
-.texto-imagen .texto-imagen__texto h2{
-    position: relative;
-    left: 5%;
-    color:green;
-    /* background-color:black; */
-    display:inline-block;
-    font-size:32px;
-    max-width: 800px;    
-}
-.texto-imagen .texto-imagen__texto p{
-    position:relative;
-    left: 5%;
-    color:green;
-    /* background-color:black; */
-    display:inline-block;
-    font-size:24px;
-    max-width: 800px;    
-}
-.texto-imagen aside{
-    display:flex;
-    align-self: center;
-    justify-content: center;
-}
-.texto-imagen aside .imagen-sidebar{
-    position:relative;
-    height:auto;
-    width:90%;
-}
-/* .parallax{
-	background-attachment: fixed;
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size:  cover;
-	height:50rem;
-	max-width: 100%;
-	position: relative
 
-.img-uno{background-image: url(../imagenes/foto-plantas-wide.jpg)}
+#header nav .leaf:hover {
+  background-color: rgba(96, 138, 33, 0.801);
 }
-*/
-.banda-miniaturas{ /* banda para trabajar las miniaturas */
-    background-color:rgb(0, 128, 0);
-    display:flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    font-family: 'Fredoka', sans-serif;
-    padding:50px;
-    row-gap: 50px;
+
+#header nav.bg-light {
+  background-color: #02a71d !important;
 }
-.banda-miniaturas h2{
-    font-size: 100px;
-    color:rgb(255, 255, 255);
+
+@media screen and (max-width: 768px) {
+  /* La pantalla tablet */
+  #header .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    /* flex-direction: column; */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
-.miniaturas{
-    background-color:rgb(255, 192, 203);
-    display:flex;
-    flex-flow:row wrap; /* la direccion del flex será en filas y se ajustará en múltiples lineas */
-    justify-content: space-evenly; /* los elementos estarán equiespaciados */
-    align-items:center;
-    width:80%;
-    row-gap: 30px;
-    padding:10px;
+
+@media screen and (max-width: 576px) {
+  #header .menu {
+    margin: 20px 0 20px 0;
+  }
 }
-.miniaturas-items{
-    height: 400px;
-    width:400px;
-    border: 5px solid rgb(2, 167, 29);
-    background-color: rgb(255, 255, 255);
+
+main {
+  margin-bottom: 50px;
+}
+
+main .principal {
+  float: none;
+  margin-bottom: 40px;
+}
+
+main .principal p {
+  color: #11290e;
+}
+
+main .principal a {
+  text-decoration: none;
+}
+
+main .principal .foto1 {
+  position: relative;
+  width: 90%;
+  height: 30rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../imagenes/foto-plantas-wide.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+  /* me separa el espacio luego la foto */
+}
+
+main .principal .texto-imagen {
+  display: -ms-grid;
+  display: grid;
+  width: 90%;
+  margin: auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+main .principal .texto-imagen__texto {
+  text-align: left;
+  margin: auto;
+  padding-right: 5%;
+}
+
+main .principal .texto-imagen__texto a {
+  color: #11290e;
+}
+
+main .principal .texto-imagen__texto h2 {
+  position: relative;
+  left: 5%;
+  color: green;
+  /* background-color:black; */
+  display: inline-block;
+  font-size: 32px;
+  max-width: 800px;
+}
+
+main .principal .texto-imagen__texto p {
+  position: relative;
+  left: 5%;
+  color: green;
+  /* background-color:black; */
+  display: inline-block;
+  font-size: 24px;
+  max-width: 800px;
+}
+
+main .principal .texto-imagen aside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .principal .texto-imagen aside .imagen-sidebar {
+  position: relative;
+  height: auto;
+  width: 90%;
+}
+
+main .banda-miniaturas {
+  /* banda para trabajar las miniaturas */
+  background-color: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Fredoka', sans-serif;
+  padding: 50px;
+  row-gap: 50px;
+}
+
+main .banda-miniaturas h2 {
+  font-size: 100px;
+  color: white;
+}
+
+main .banda-miniaturas .miniaturas {
+  /* miniaturas de las plantas vistas en página main, subitem miniaturas-item */
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* la direccion del flex será en filas y se ajustará en múltiples lineas */
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  /* los elementos estarán equiespaciados */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  row-gap: 30px;
+  padding: 10px;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items {
+  height: 400px;
+  width: 400px;
+  border: 5px solid #02a71d;
+  background-color: white;
+  border-radius: 0 0 10% 0;
+  text-align: center;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items:hover {
+  border: 5px solid #486819;
+  background-color: white;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items a {
+  text-decoration: none;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items p {
+  /* Clase LEAF como arriba! */
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+  font-size: 30px;
+  background-color: #97dd2d;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bolder;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items p:hover {
+  background-color: #486819;
+  color: white;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items img {
+  width: auto;
+  height: 100%;
+}
+
+@media screen and (max-width: 1400px) {
+  main .principal .texto-imagen .texto-imagen__texto h2 {
+    font-size: 24px;
+  }
+  main .principal .texto-imagen .texto-imagen__texto p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  main .principal .texto-imagen {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .principal .texto-imagen__texto {
+    margin-bottom: 30px;
+    width: 70%;
+  }
+  main .principal .texto-imagen aside .imagen-sidebar {
+    width: 70%;
+  }
+  main .banda-miniaturas {
+    row-gap: 20px;
+  }
+  main .banda-miniaturas div h2 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* La pantalla tablet */
+  main .banda-miniaturas .miniaturas .miniaturas-items {
+    height: 300px;
+    width: 300px;
+    border: 5px solid #02a71d;
+    background-color: white;
     border-radius: 0 0 10% 0;
     text-align: center;
+  }
+  main .banda-miniaturas .miniaturas .miniaturas-items p {
+    font-size: 24px;
+  }
 }
 
-.miniaturas-items a {
-    text-decoration: none;  
+@media screen and (max-width: 576px) {
+  main .principal .foto1 {
+    margin-bottom: 10px;
+  }
+  main .principal .texto-imagen .texto-imagen__texto h2 {
+    font-size: 18px;
+  }
+  main .principal .texto-imagen .texto-imagen__texto p {
+    font-size: 14px;
+  }
 }
-.miniaturas-items:hover{
-    border: 5px solid rgb(72, 104, 25);  
-    background-color: rgb(255, 255, 255);
-}
-.miniaturas-items p{ /* Clase LEAF como arriba! */
-    position:relative;
-    bottom:30px;
-    left: 5px;
-    font-size:30px;
-    background-color: rgb(151, 221, 45);
-    margin: 0px;
-    border-radius: 50px 0 50px 0;
-    padding: 10px 20px; 
-    color:rgb(0, 0, 0);
-    font-weight: bolder;
-} 
-.miniaturas-items p:hover {
-    background-color: rgb(72, 104, 25);  
-    color:rgb(255, 255, 255);  
-}
-.miniaturas-items img{
-    width:auto;
-    height:100%;
-}
-.banda-wikiplantas{
-    width:95%;
-    margin:auto;
-    display:flex;
-    background-color:rgb(255, 255, 255);
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    font-family: 'Fredoka', sans-serif;
-    padding:50px;
-    row-gap: 50px;
-}
-.banda-wikiplantas .banda_intro{
-    padding-bottom: 20px;
-}
-.banda-intro__iconos{
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-    padding: 20px 10px 30px 10px;
-}
-.banda-intro__iconos a{
-    position:relative;
-    z-index: 0;
-    border:solid 5px #FFF;
-}
-.banda-intro__iconos a:hover{
-    animation-name:shake;
-    animation-iteration-count:1;
-    animation-timing-function: linear;
-    animation-duration:500ms;
-    animation-delay:0s;
-    position:relative;
-    z-index: 1;
-    border:solid 5px rgb(0, 0, 0);
-    border-radius: 5%;
-}
-@keyframes shake{
-    25%{
-        transform:rotate(10deg);
-        bottom:5px;
-    }
-    50%{
-        transform:rotate(-20deg);
-        bottom:10px;
-    }
-    100%{
-        transform:rotate(10deg);
-        bottom:0px;
-    }
-}
-.banda-intro__iconos img{
-    width:100px;
-    height:100px;
 
+/* Partial pagina Wikiplantas */
+body main .banda-wikiplantas {
+  width: 100%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Fredoka', sans-serif;
+  padding: 50px;
+  row-gap: 50px;
 }
-.banda-intro__1200px h2{
-    font-size:50px;
-}
-.banda-intro__1200px p{
-    font-size:30px;
-}
-.banda-wikiplantas .banda-intro__1200px{
-    padding-bottom: 20px;
-}
-.banda-intro__iconos{
-    display:flex;
-    flex-direction: row;
-    justify-content:center;
-    padding: 20px 10px 30px 10px;
-}
-.banda-intro__iconos a{
-    position:relative;
-    z-index: 0;
-    border:solid 5px #FFF;
-}
-.banda-intro__iconos a:hover{
-    animation-name:shake;
-    animation-iteration-count:1;
-    animation-timing-function: linear;
-    animation-duration:500ms;
-    animation-delay:0s;
-    position:relative;
-    z-index: 1;
-    border:solid 5px rgb(0, 0, 0);
-    border-radius: 5%;
-}
-@keyframes shake{
-    25%{
-        transform:rotate(10deg);
-        bottom:5px;
-    }
-    50%{
-        transform:rotate(-20deg);
-        bottom:10px;
-    }
-    100%{
-        transform:rotate(10deg);
-        bottom:0px;
-    }
-}
-.banda-intro__iconos img{
-    width:100px;
-    height:100px;
 
+body main .banda-wikiplantas .banda-intro {
+  padding-bottom: 20px;
 }
-.banda-intro h2{
-    font-size:50px;
-}
-.banda-intro p{
-    font-size:30px;
-}
-.infografias{
-/*     background-color:rgb(255, 192, 203); */
-    display:flex;
-    flex-flow: row wrap;
-    gap: 20px;
-    padding: 20px 20px;
-    width:100%;
-}
-.tarjeta1{
-/*     background-color: rgb(255, 255, 255); */
-    display:flex;
-    flex-flow:row nowrap;
-    align-items:center;
-    /* gap:20px; */
-}
-.tarjeta2{
- /*    background-color: rgb(255, 255, 255); */
-    display:flex;
-    flex-flow:row-reverse nowrap;
-    align-items:center;
-    /* gap:20px; */
-}
-.tarjeta-imagen {
-    display:flex;
-    align-items:center; 
-    justify-content:center;
-    width:auto;
-    background-color:rgb(255, 255, 255);
-    border: 5px solid #000;
-    border-radius: 50%;
-    z-index:1;
-}
-.tarjeta-imagen img{
-    height:400px;
-    width:400px;
-    /* background-color:rgb(255, 255, 255); */
-    border-radius: 50%;
-    z-index:1;
-}
-.tarjeta-texto1{
-/*     font-family: 'Fredoka', sans-serif; */
-    display:flex;
-    flex-flow:column nowrap;
-    height:90%;
-    align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
-    background-color: rgb(124, 252, 209);
-    padding:0 10px 0 120px;
-    position:relative;
-    right:100px;
-    z-index:0;
-    border-radius: 15px 15px 15px 15px;
-    width:100%;
-    justify-content: space-evenly;
-}
-.tarjeta-texto2{
-    /*     font-family: 'Fredoka', sans-serif; */
-    display:flex;
-    flex-flow:column nowrap;
-    height:90%;
-    align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
-    background-color: rgb(124, 252, 209);
-    padding:0 120px 0 30px;
-    position:relative;
-    left:100px;
-    z-index:0;
-    border-radius: 15px 15px 15px 15px;
-    width:100%;
-    justify-content: space-evenly;
-}
-.tarjeta-texto1 h3, .tarjeta-texto2 h3{
-    font-weight: 900;
-}
-.banda-tienda{
-    display:flex;
-    flex-flow: row wrap;
-   /*  background-color: rgb(0, 255, 170); */
-    background-color:rgb(0, 128, 0);
-    justify-content:center; /* centra el div que está adentro */
-    /* align-items: center; */
-    padding: 20px 0;
-}
-.banda-tienda__casillas{
-    display:flex;
-    flex-flow: row wrap;
-    /* background-color: rgb(255, 22, 216); */
-    gap:10px;
-    width:80%;
-    justify-content: space-around;
-}
-.banda-tienda__casillas_item {
-    display:flex;
-    border: 3px solid #000;
-    background-color: rgb(255, 255, 255);
-    justify-content:center;  /* me centra el contenido, debe tener display:flex activado! */
-    flex-direction: column;
-    border-radius: 5px;
-}
-.banda-tienda__casillas .card{
-    border: 3px solid #000;
-    border-radius: 5px;
-    width: 20rem;
-}
-.banda-tienda__casillas .card h4{
-    font-size:20px;
-    display:flex;
-    justify-content: center;
-}
-.banda-tienda__casillas .card p{
-    font-size:20px;
-    display:flex;
-    justify-content: center;
-}
-.banda-contacto{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    /* background-color: aqua; */
-    width:80%;
-    margin:auto;
-    text-align: center;
 
+body main .banda-wikiplantas .banda-intro h2 {
+  font-size: 50px;
 }
-.banda-contacto h2{
-    font-size: 30px;
-}
-.banda-contacto__formulario{
-    display:flex;
-    padding:50px 0 0 0; 
-    width:50%;
-    justify-content: center;
-    /* background-color: rgb(255, 0, 221); */
-    margin:auto;
-}
-.formulario{
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 8fr 1fr 1fr ;
-    width:100%;
-    gap:10px;
 
+body main .banda-wikiplantas .banda-intro p {
+  font-size: 30px;
 }
-.formulario__inputs{
-    display:flex;
-    flex-direction: column;
-    gap:10px;
-    margin:auto;
-    width:100%
+
+body main .banda-wikiplantas .banda-intro__iconos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 10px 30px 10px;
 }
-.formulario__inputs__lineas{
-    display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width:90%;
-    margin:auto;
+
+body main .banda-wikiplantas .banda-intro__iconos a {
+  position: relative;
+  z-index: 0;
+  border: solid 5px white;
 }
-.banda-quienes_somos{
-    display:flex;
+
+body main .banda-wikiplantas .banda-intro__iconos a:hover {
+  -webkit-animation-name: shake;
+          animation-name: shake;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-duration: 500ms;
+          animation-duration: 500ms;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  position: relative;
+  z-index: 1;
+  border: solid 5px black;
+  border-radius: 5%;
+}
+
+body main .banda-wikiplantas .banda-intro__iconos img {
+  width: 100px;
+  height: 100px;
+}
+
+body main .banda-wikiplantas .banda-intro__1200px {
+  padding-bottom: 20px;
+}
+
+body main .banda-wikiplantas .banda-intro__1200px h2 {
+  font-size: 50px;
+}
+
+body main .banda-wikiplantas .banda-intro__1200px p {
+  font-size: 30px;
+}
+
+body main .banda-wikiplantas .infografias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 20px;
+  padding: 20px 20px;
+  width: 100%;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta1 {
+  /*     background-color: rgb(255, 255, 255); */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* gap:20px; */
+}
+
+body main .banda-wikiplantas .infografias .tarjeta1 .tarjeta-imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  background-color: white;
+  border: 5px solid #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta1 .tarjeta-imagen img {
+  height: 400px;
+  width: 400px;
+  /* background-color:rgb(255, 255, 255); */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta1 .tarjeta-texto1 {
+  /*     font-family: 'Fredoka', sans-serif; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+  background-color: #7cfcd1;
+  padding: 0 10px 0 120px;
+  position: relative;
+  right: 100px;
+  z-index: 0;
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta2 {
+  /*    background-color: rgb(255, 255, 255); */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse nowrap;
+          flex-flow: row-reverse nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* gap:20px; */
+}
+
+body main .banda-wikiplantas .infografias .tarjeta2 .tarjeta-imagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+  background-color: white;
+  border: 5px solid #000;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta2 .tarjeta-imagen img {
+  height: 400px;
+  width: 400px;
+  /* background-color:rgb(255, 255, 255); */
+  border-radius: 50%;
+  z-index: 1;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta2 .tarjeta-texto2 {
+  /*     font-family: 'Fredoka', sans-serif; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  height: 90%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+  background-color: #7cfcd1;
+  padding: 0 120px 0 30px;
+  position: relative;
+  left: 100px;
+  z-index: 0;
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body main .banda-wikiplantas .infografias .tarjeta-texto1 h3, body main .banda-wikiplantas .infografias .tarjeta-texto2 h3 {
+  font-weight: 900;
+}
+
+body main .banda-wikiplantas .banda-intro__1200px {
+  display: none;
+}
+
+body main .banda-wikiplantas2 {
+  display: none;
+}
+
+body main .banda-wikiplantas2 .infografias-bootstrap {
+  display: none;
+}
+
+/* Media Queries Wikiplantas */
+@media screen and (max-width: 1400px) {
+  .banda-wikiplantas {
     width: 90%;
-    /* background-color: rgb(135, 235, 5); */
-    margin:auto;
-    flex-direction: column;
+  }
+  /* ocultamos la banda-intro iconos de wikiplantas */
+  .banda-wikiplantas .banda-intro .banda-intro__iconos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 
-}
-.banda-quienes_somos h2{
-    font-size: 30px;
-}
-.banda-direccion{
-    display:flex;
-    /*    width: 90%; */
-    /* background-color: rgb(135, 235, 5); */
-    margin:auto;
-    flex-direction: column;
-    padding: 50px 0px 50px 0px;
-    justify-content: center;
-}
-#pie-pagina{
-    background: rgb(2, 167, 29);
-    border: 2px solid rgb(0, 0, 0);
-    padding-top: 10px;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-
-}
-#pie-pagina .planilla_footer{
-    display:grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-}
-#pie-pagina .planilla_footer h4:nth-child(1){ /* Horarios Tienda */
-    grid-column:1/2;
-    grid-row:1/2;
-}
-#pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
-    grid-column:2/3;
-    grid-row:1/2;
-}
-#pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
-    grid-column:2/3;
-    grid-row:2/3;
-}
-#pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
-    grid-column:3/4;
-    grid-row:1/2;
-}
-#pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
-    grid-column:3/4;
-    grid-row:2/3;
-}
-#pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
-    grid-column:1/2;
-    grid-row:3/4;
-}
-#pie-pagina .planilla_footer p:nth-child(7){ /* email */
-    grid-column:2/3;
-    grid-row:3/4;
-}
-#pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
-    grid-column:1/2;
-    grid-row:4/5;
-}
-#pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
-    grid-column:2/3;
-    grid-row:4/5;
-}
-#pie-pagina img{
-    height: 100%;
-    width:auto;
-}
-#pie-pagina a{
-    height:25px;
-    display:inline-block;
-}
-#pie-pagina .banda_iconos{
-    padding-top: 10px;
+@media screen and (max-width: 1200px) {
+  body main .banda-wikiplantas .infografias {
+    display: none;
+  }
+  body main .banda-wikiplantas .banda-intro {
+    display: none;
+  }
+  body main .banda-wikiplantas .banda-intro__1200px {
+    display: initial;
+  }
+  body main .banda-wikiplantas .banda-intro__1200px .banda-intro__iconos {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  body main .banda-wikiplantas2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    background-color: #7cfcd1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    padding: 50px;
+    row-gap: 50px;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+    row-gap: 10px;
+    background-color: white;
+    padding: 20px 0 20px 0;
+    border-radius: 20px;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap h3 {
+    font-weight: 900;
+    font-size: 25px;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: solid 10px #7cfcd1;
+    border-radius: 10px;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap__card img {
+    height: 300px;
+    width: 300px;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap__card .accordion {
+    width: 100%;
+  }
+  body main .banda-wikiplantas2 .infografias-bootstrap__card__titulo {
+    border-bottom: solid 10px #7cfcd1;
+    width: 100%;
+    text-align: center;
+  }
 }
 
-/* SECCION RESPONSIVE */
-
-.banda-wikiplantas2{
-    display:none;
-}
-.banda-intro__1200px{
-    display:none;
-}
-.infografias-bootstrap{
-    display:none;
-}
-.click-menu{
-    visibility:hidden;
-
-}
-#carousel-tienda{
-    display:none;
-}
-.banda-tienda{
-    padding-bottom: 200px;
+@media screen and (max-width: 768px) {
+  /* La pantalla tablet */
+  body main .banda-wikiplantas2 .infografias-bootstrap {
+    width: 100%;
+    /* banda de página wikiplantas (padre es wikiplantas2) */
+  }
 }
 
-/* MEDIA QUERIES */
-@media screen and (max-width:1400px){ 
-    .banda-wikiplantas{
-        width:90%;
-    }
-    .texto-imagen .texto-imagen__texto h2{
-        font-size:24px;
-    }
-    .texto-imagen .texto-imagen__texto p{
-        font-size: 18px;
-    }
-    .tarjeta-imagen img{
-        height:300px;
-        width:300px;
-        /* background-color:rgb(255, 255, 255); */
-    }
-    .tarjeta-texto1 p, .tarjeta-texto2 p {
-        font-size: 12px;
-    }
-    .banda-intro__iconos{
-        flex-wrap:wrap;
-    }
-    /* ocultamos la banda-intro iconos de wikiplantas */
-    .banda-wikiplantas .banda-intro .banda-intro__iconos{
-        display:none;
-    }
+@media screen and (max-width: 650px) {
+  body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img {
+    width: 250px;
+    height: 250px;
+  }
 }
-@media screen and (max-width:1200px){
-    .banda-intro__1200px{
-        display:initial;
-    }
-    .banda-intro{
-        display:none;
-    }
-    .banda-wikiplantas2{
-        display:flex;
-        width:100%;
-        margin:auto;
-        display:flex;
-        background-color:rgb(124, 252, 209);
-        flex-direction: column;
-        justify-content:center;
-        align-items: center;
-        font-family: 'Fredoka', sans-serif;
-        padding:50px;
-        row-gap: 50px;
-    }
-    .infografias-bootstrap{
-        display:flex;
-        flex-direction: column;
-        align-items: center;
-        width:70%;
-        row-gap: 10px;
-        background-color:rgb(255, 255, 255);
-        padding: 20px 0 20px 0;
-        border-radius: 20px;
-    }
-    .infografias-bootstrap h3{
-        font-weight: 900;
-        font-size: 25px;
-    }
-    .infografias-bootstrap__card{
-        display:flex;
-        flex-direction: column;
-        background-color: rgb(255, 255, 255);
-        width:90%;
-        align-items: center;
-        border: solid 10px rgb(124, 252, 209);   
-        border-radius: 10px;     
-    }
-    .infografias-bootstrap__card__titulo{
-        border-bottom: solid 10px rgb(124, 252, 209);
-        width:100%;
-        text-align: center;
-    }
-    .infografias-bootstrap__card img{
-        height:300px;
-        width:300px;
-    }
-    .infografias-bootstrap__card .accordion{
-        width:100%;
-    }
-    .infografias{
-        display:none;
-    }
-    .banda-tienda__casillas .card{
-        border: 3px solid #000;
-        border-radius: 5px;
-        width: 15rem;
-    }
-    .banda-tienda__casillas .card h4{
-        font-size:16px;
-        display:flex;
-        justify-content: center;
-    }
-    .banda-tienda__casillas .card p{
-        font-size:16px;
-        display:flex;
-        justify-content: center;
-    }
+
+@media screen and (max-width: 576px) {
+  body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img {
+    width: 200px;
+    height: 200px;
+  }
 }
-@media screen and (max-width:992px){ 
-    .texto-imagen{
-        display:flex;
-        flex-direction: column;
-    }
-    .texto-imagen .texto-imagen__texto{
-        margin-bottom: 30px;
-    }
-    .texto-imagen aside .imagen-sidebar{
-        width:70%;
-    }
-    .banda-miniaturas{
-        row-gap:20px;
-    }
-    .banda-miniaturas div h2{
-        font-size: 48px;
-    }
-    #pie-pagina .planilla_footer{
-        display:grid;
+
+@media screen and (max-width: 480px) {
+  /* La pantalla celular */
+  body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.main-index .banda-tienda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  background-color: green;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* centra el div que está adentro */
+  padding: 20px 0;
+  padding-bottom: 200px;
+}
+
+.main-index .banda-tienda__casillas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  /* background-color: rgb(255, 22, 216); */
+  gap: 10px;
+  width: 80%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.main-index .banda-tienda__casillas_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 3px solid #000;
+  background-color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* me centra el contenido, debe tener display:flex activado! */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 5px;
+}
+
+.main-index .banda-tienda__casillas .card {
+  border: 3px solid #000;
+  border-radius: 5px;
+  width: 20rem;
+}
+
+.main-index .banda-tienda__casillas .card h4 {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-index .banda-tienda__casillas .card p {
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#carousel-tienda {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-index .banda-tienda__casillas .card {
+    border: 3px solid #000;
+    border-radius: 5px;
+    width: 15rem;
+  }
+  .main-index .banda-tienda__casillas .card h4 {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main-index .banda-tienda__casillas .card p {
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* La pantalla tablet */
+  #carousel-tienda {
+    display: contents;
+  }
+  .banda-tienda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    row-gap: 20px;
+    padding: 100px 0 100px 0;
+  }
+  .banda-tienda__casillas .card {
+    display: none;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    position: relative;
+  }
+  .carousel-control-prev-icon {
+    background-image: url(/proyecto/imagenes/arrow_left.png);
+  }
+  .carousel-control-next-icon {
+    background-image: url(/proyecto/imagenes/arrow_right.png);
+  }
+  #carousel-tienda .carousel-indicators {
+    position: relative;
+    top: 110%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #carousel-tienda .carousel-indicators [data-bs-target] {
+    background-color: white;
+  }
+  #carousel-tienda .carousel-inner .carousel-item .card {
+    display: contents;
+    border: 3px solid #000;
+    border-radius: 5px;
+    /* width: 10rem; */
+  }
+  #carousel-tienda .carousel-control-next-icon, .carousel-control-prev-icon {
+    width: 4rem;
+    height: 4rem;
+  }
+  #carousel-tienda .carousel-inner {
+    width: 70%;
+  }
+  #carousel-tienda .carousel-inner .carousel-item .card h4 {
+    font-size: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #carousel-tienda .carousel-inner .carousel-item .card p {
+    font-size: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #carousel-tienda .carousel-inner .carousel-item .card h4 {
+    font-size: 20px;
+  }
+  #carousel-tienda .carousel-inner .carousel-item .card p {
+    font-size: 20px;
+  }
+}
+
+.banda-contacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* background-color: aqua; */
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+.banda-contacto h2 {
+  font-size: 30px;
+}
+
+.banda-contacto__formulario {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0 0 0;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* background-color: rgb(255, 0, 221); */
+  margin: auto;
+}
+
+.formulario {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 8fr 1fr 1fr;
+      grid-template-rows: 8fr 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+}
+
+.formulario__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  width: 100%;
+}
+
+.formulario__inputs__lineas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
+  margin: auto;
+}
+
+body main .banda-quienes_somos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  /* background-color: rgb(135, 235, 5); */
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main .banda-quienes_somos h2 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+body main .banda-quienes_somos .banda-direccion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*    width: 90%; */
+  /* background-color: rgb(135, 235, 5); */
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 0px 50px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@-webkit-keyframes shake {
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    bottom: 5px;
+  }
+  50% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    bottom: 10px;
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    bottom: 0px;
+  }
+}
+
+@keyframes shake {
+  25% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    bottom: 5px;
+  }
+  50% {
+    -webkit-transform: rotate(-20deg);
+            transform: rotate(-20deg);
+    bottom: 10px;
+  }
+  100% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+    bottom: 0px;
+  }
+}
+
+#pie-pagina {
+  background: #02a71d;
+  border: 2px solid black;
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#pie-pagina .planilla_footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+#pie-pagina .planilla_footer h4:nth-child(1) {
+  /* Horarios Tienda */
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#pie-pagina .planilla_footer p:nth-child(2) {
+  /* Lunes a Jueves */
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#pie-pagina .planilla_footer p:nth-child(3) {
+  /* Viernes y Sábado */
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+#pie-pagina .planilla_footer p:nth-child(4) {
+  /* Horario largo */
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+}
+
+#pie-pagina .planilla_footer p:nth-child(5) {
+  /* Horario corto */
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+#pie-pagina .planilla_footer h4:nth-child(6) {
+  /* Email de contacto */
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+#pie-pagina .planilla_footer p:nth-child(7) {
+  /* email */
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+}
+
+#pie-pagina .planilla_footer h4:nth-child(8) {
+  /* direccion*/
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+#pie-pagina .planilla_footer p:nth-child(9) {
+  /* santiago */
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+}
+
+#pie-pagina img {
+  height: 100%;
+  width: auto;
+}
+
+#pie-pagina a {
+  height: 25px;
+  display: inline-block;
+}
+
+#pie-pagina .banda_iconos {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#pie-pagina .leaf_footer {
+  background-color: #97dd2d;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 0px 20px;
+}
+
+#pie-pagina .leaf_footer:hover {
+  background-color: rgba(96, 138, 33, 0.801);
+}
+
+@media screen and (max-width: 992px) {
+  #pie-pagina .planilla_footer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-    #pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
-        grid-column:1/2;
-        grid-row:2/3;
-    }
-    #pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
-        grid-column:1/2;
-        grid-row:3/4;
-    }
-    #pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
-        grid-column:2/3;
-        grid-row:2/3;
-    }
-    #pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
-        grid-column:2/3;
-        grid-row:3/4;
-    }
-    #pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
-        grid-column:1/2;
-        grid-row:4/5;
-    }
-    #pie-pagina .planilla_footer p:nth-child(7){ /* email */
-        grid-column:2/3;
-        grid-row:4/5;
-    }
-    #pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
-        grid-column:1/2;
-        grid-row:5/6;
-    }
-    #pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
-        grid-column:2/3;
-        grid-row:5/6;
-    }
+  }
+  #pie-pagina .planilla_footer p:nth-child(2) {
+    /* Lunes a Jueves */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  #pie-pagina .planilla_footer p:nth-child(3) {
+    /* Viernes y Sábado */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #pie-pagina .planilla_footer p:nth-child(4) {
+    /* Horario largo */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  #pie-pagina .planilla_footer p:nth-child(5) {
+    /* Horario corto */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #pie-pagina .planilla_footer h4:nth-child(6) {
+    /* Email de contacto */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  #pie-pagina .planilla_footer p:nth-child(7) {
+    /* email */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  #pie-pagina .planilla_footer h4:nth-child(8) {
+    /* direccion*/
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  #pie-pagina .planilla_footer p:nth-child(9) {
+    /* santaigo */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
 }
-@media screen and (max-width: 768px) { /* La pantalla tablet */
-    #header .menu{
-        display:flex;
-        /* flex-direction: column; */
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-    .titulo {
-        top:0px;
-    }
-    .miniaturas-items{
-        height: 300px;
-        width:300px;
-        border: 5px solid rgb(2, 167, 29);
-        background-color: rgb(255, 255, 255);
-        border-radius: 0 0 10% 0;
-        text-align: center;
-    }
-    .miniaturas-items p{
-        font-size: 24px;
-    }
-    #carousel-tienda{
-        display:contents;
-    }
-    .banda-tienda{
-        display:flex;
-        row-gap: 20px;
-        padding: 100px 0 100px 0;
-    }
-    .banda-tienda__casillas .card{
-        display:none;
-    }
-    .carousel-control-prev,.carousel-control-next{
-        position:relative;
-    }
-    .carousel-control-prev-icon {
-        background-image: url(/proyecto/imagenes/arrow_left.png);
-    }
-    .carousel-control-next-icon {
-        background-image: url(/proyecto/imagenes/arrow_right.png);
-    }
-    #carousel-tienda .carousel-indicators{
-        position:relative;
-        top:110%;
-        flex-wrap: wrap;
-    }
-    #carousel-tienda .carousel-indicators [data-bs-target] {
-        background-color: rgb(255, 255, 255);
-    }
-    #carousel-tienda .carousel-inner .carousel-item .card{
-        display:contents;
-        border: 3px solid #000;
-        border-radius: 5px;
-        /* width: 10rem; */
-    }
-    #carousel-tienda .carousel-control-next-icon, .carousel-control-prev-icon{
-        width:4rem;
-        height:4rem;
-    }
-    #carousel-tienda .carousel-inner {
-        width:70%;
-    }
-    #carousel-tienda .carousel-inner .carousel-item .card h4{
-        font-size:25px;
-        display:flex;
-        justify-content: center;
-    }
-    #carousel-tienda .carousel-inner .carousel-item .card p{
-        font-size:25px;
-        display:flex;
-        justify-content: center;
-    }
-    .infografias-bootstrap{
-        width:100%; /* banda de página wikiplantas (padre es wikiplantas2) */
-    }
-    #pie-pagina{
-        display:grid;
+
+@media screen and (max-width: 768px) {
+  /* La pantalla tablet */
+  #pie-pagina {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 2fr;
         grid-template-rows: 1fr 2fr;
-    }
-    #pie-pagina .redes_sociales{
-        grid-row:1/2;
-        grid-column: 2/3;
-        display:flex;
-        align-items: center;
-        column-gap: 10px;
-    }
-    #pie-pagina .redes_sociales .banda_iconos{
-        justify-content: center;
-        column-gap:10%;
-    }
-    #pie-pagina .planilla_footer{
-        grid-row:2/3; /* ubicación en la grid padre -> Pie-pagina */
-        grid-column:1/3; /* ubicación en la grid padre -> Pie-pagina */
-        width:fit-content;
+  }
+  #pie-pagina .redes_sociales {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  #pie-pagina .redes_sociales .banda_iconos {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 10%;
+            column-gap: 10%;
+  }
+  #pie-pagina div:nth-child(1) {
+    -ms-grid-column-align: right;
+        justify-self: right;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
+    padding-right: 20px;
+  }
+  #pie-pagina .planilla_footer {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    /* ubicación en la grid padre -> Pie-pagina */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    /* ubicación en la grid padre -> Pie-pagina */
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
         justify-self: center;
-        display:grid;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    }
-    #pie-pagina .planilla_footer h4:nth-child(1){ /* Horarios Tienda */
-        grid-column:1/2;
-        grid-row:1/2;
-    }
-    #pie-pagina .planilla_footer p:nth-child(2){ /* Lunes a Jueves */
-        grid-column:1/2;
-        grid-row:2/3;
-    }
-    #pie-pagina .planilla_footer p:nth-child(3){ /* Viernes y Sábado */
-        grid-column:1/2;
-        grid-row:3/4;
-    }
-    #pie-pagina .planilla_footer p:nth-child(4){ /* Horario largo */
-        grid-column:2/3;
-        grid-row:2/3;
-    }
-    #pie-pagina .planilla_footer p:nth-child(5){ /* Horario corto */
-        grid-column:2/3;
-        grid-row:3/4;
-    }
-    #pie-pagina .planilla_footer h4:nth-child(6){ /* Email de contacto */
-        grid-column:1/2;
-        grid-row:4/5;
-    }
-    #pie-pagina .planilla_footer p:nth-child(7){ /* email */
-        grid-column:2/3;
-        grid-row:4/5;
-    }
-    #pie-pagina .planilla_footer h4:nth-child(8){ /* direccion*/
-        grid-column:1/2;
-        grid-row:5/6;
-    }
-    #pie-pagina .planilla_footer p:nth-child(9){ /* santaigo */
-        grid-column:2/3;
-        grid-row:5/6;
-    }
-}
-@media screen and (max-width: 650px){
-    .infografias-bootstrap__card img{
-        width:250px;
-        height: 250px;
-    }
-
-}
-@media screen and (max-width: 576px){
-    #header .menu{
-        margin: 20px 0 20px 0;
-    }
-    .principal .foto1{
-        margin-bottom:10px;
-    }
-    .texto-imagen .texto-imagen__texto h2{
-        font-size:18px;
-    }
-    .texto-imagen .texto-imagen__texto p{
-        font-size: 14px;
-    }
-    #carousel-tienda .carousel-inner .carousel-item .card h4{
-        font-size:20px;
-        display:flex;
-        justify-content: center;
-    }
-    #carousel-tienda .carousel-inner .carousel-item .card p{
-        font-size:20px;
-        display:flex;
-        justify-content: center;
-    }
-    .infografias-bootstrap__card img{
-        width:200px;
-        height: 200px;
-    }
-}
-
-@media screen and (max-width: 480px) { /* La pantalla celular */
-    .menu{
-        display:flex;
-        flex-direction: column;
-        position: relative;
-        z-index: 1;
-        align-items: center;
-    }
-    .menu nav{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        column-gap: 50px;
-/*      margin-top: 15px; */
-    }
-    .texto-imagen {
-        display:flex;
-        flex-direction: column;
-        width:90%;
-
-    }
-    .texto-imagen h2{
-        font-size:20px;
-    }
-    .texto-imagen p{
-        font-size:18px;
-    }
-    aside {
-        justify-content: center;
-
-    }
-    .infografias-bootstrap__card img{
-        width:150px;
-        height: 150px;
-    }
-    .infografias-bootstrap__card{
-
-    }
+  }
+  #pie-pagina .planilla_footer h4:nth-child(1) {
+    /* Horarios Tienda */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+  #pie-pagina .planilla_footer p:nth-child(2) {
+    /* Lunes a Jueves */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  #pie-pagina .planilla_footer p:nth-child(3) {
+    /* Viernes y Sábado */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #pie-pagina .planilla_footer p:nth-child(4) {
+    /* Horario largo */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+  #pie-pagina .planilla_footer p:nth-child(5) {
+    /* Horario corto */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+  }
+  #pie-pagina .planilla_footer h4:nth-child(6) {
+    /* Email de contacto */
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  #pie-pagina .planilla_footer p:nth-child(7) {
+    /* email */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4/5;
+  }
+  #pie-pagina .planilla_footer h4:nth-child(8) {
+    /* direccion*/
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
+  #pie-pagina .planilla_footer p:nth-child(9) {
+    /* santaigo */
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 5;
+    -ms-grid-row-span: 1;
+    grid-row: 5/6;
+  }
 }
