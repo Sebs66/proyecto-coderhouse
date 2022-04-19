@@ -1,0 +1,26 @@
+#header{
+    .banner {
+        background-image: url(../imagenes/banner-wide.png); 
+        height:156px;
+    }
+    nav{
+        margin-bottom: 10px;
+        font-weight: 900;
+
+        .navbar-collapse{
+            flex-grow: inherit;
+        }
+        .leaf {
+            background-color: rgb(151, 221, 45);
+            margin: 0px;
+            border-radius: 50px 0 50px 0;
+            padding: 10px 20px; 
+            &:hover {
+                background-color: rgba(96, 138, 33, 0.801);    
+            }
+        }
+    }
+    nav.bg-light{
+        background-color:rgb(2, 167, 29) !important; // No está cambiando el color!!
+    }
+}

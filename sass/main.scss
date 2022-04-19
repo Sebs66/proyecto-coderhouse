@@ -1,0 +1,158 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+$colorTexto1Index: green;
+$colorTexto2Index: rgb(17, 41, 14);
+body { 
+    font-family: 'Fredoka', sans-serif;
+    background-color:rgb(255, 255, 255);
+    display:flex;
+    flex-direction: column;
+    min-width: 320px;
+    width:100%;
+
+    main{
+        margin-bottom: 50px;
+        .principal {
+            float:none;
+            margin-bottom: 40px;
+            p{
+                color: $colorTexto2Index;
+            }
+            a {
+                text-decoration: none;  
+            }
+            .foto1 {
+                position: relative;
+                width: 90%;
+                height:30rem;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                background-image: url(../imagenes/foto-plantas-wide.jpg);
+                background-position: center center;
+                background-repeat:no-repeat;
+                margin-bottom:40px; /* me separa el espacio luego la foto */
+            }
+            .texto-imagen{
+                display:grid;
+                width: 90%;
+                margin:auto;
+                grid-template-columns: 1fr 1fr;
+                &__texto{
+                    text-align:left;
+                    margin: auto;
+                    padding-right:5%;
+                    a{
+                        color:$colorTexto2Index;
+                    }
+                    h2{
+                        position: relative;
+                        left: 5%;
+                        color:$colorTexto1Index;
+                        /* background-color:black; */
+                        display:inline-block;
+                        font-size:32px;
+                        max-width: 800px;
+                    }
+                    p{
+                        position:relative;
+                        left: 5%;
+                        color:$colorTexto1Index;
+                        /* background-color:black; */
+                        display:inline-block;
+                        font-size:24px;
+                        max-width: 800px;    
+                    }
+                }
+                aside{
+                    display:flex;
+                    align-self: center;
+                    justify-content: center;
+                    .imagen-sidebar{
+                        position:relative;
+                        height:auto;
+                        width:90%;
+                    }
+                }
+            }
+        }
+        .banda-miniaturas{ /* banda para trabajar las miniaturas */
+            background-color:rgb(0, 128, 0);
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            font-family: 'Fredoka', sans-serif;
+            padding:50px;
+            row-gap: 50px;
+            h2{
+                font-size: 100px;
+                color:rgb(255, 255, 255);
+            }
+            .miniaturas{ /* miniaturas de las plantas vistas en página main, subitem miniaturas-item */
+                background-color:rgb(255, 192, 203);
+                display:flex;
+                flex-flow:row wrap; /* la direccion del flex será en filas y se ajustará en múltiples lineas */
+                justify-content: space-evenly; /* los elementos estarán equiespaciados */
+                align-items:center;
+                width:80%;
+                row-gap: 30px;
+                padding:10px;
+                .miniaturas-items{
+                    height: 400px;
+                    width:400px;
+                    border: 5px solid rgb(2, 167, 29);
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 0 0 10% 0;
+                    text-align: center;
+                    &:hover{
+                        border: 5px solid rgb(72, 104, 25);  
+                        background-color: rgb(255, 255, 255);
+                    }
+                    a{
+                        text-decoration: none;  
+                    }
+                    p{ /* Clase LEAF como arriba! */
+                        position:relative;
+                        bottom:30px;
+                        left: 5px;
+                        font-size:30px;
+                        background-color: rgb(151, 221, 45);
+                        margin: 0px;
+                        border-radius: 50px 0 50px 0;
+                        padding: 10px 20px; 
+                        color:rgb(0, 0, 0);
+                        font-weight: bolder;
+                        &:hover {
+                            background-color: rgb(72, 104, 25);  
+                            color:rgb(255, 255, 255);  
+                        }
+                    }
+                    img{
+                        width:auto;
+                        height:100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@import 'header';
+@import 'wikiplantas';
+@import 'tienda';
+@import 'contacto';
+@import 'quienes_somos';
+@import 'animaciones';
+@import 'footer';

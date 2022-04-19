@@ -1,0 +1,124 @@
+.main-index .banda-tienda{
+    display:flex;
+    flex-flow: row wrap;
+    background-color:rgb(0, 128, 0);
+    justify-content:center; /* centra el div que está adentro */
+    padding: 20px 0;
+    padding-bottom: 200px;
+    &__casillas{
+        display:flex;
+        flex-flow: row wrap;
+        /* background-color: rgb(255, 22, 216); */
+        gap:10px;
+        width:80%;
+        justify-content: space-around;
+        &_item {
+            display:flex;
+            border: 3px solid #000;
+            background-color: rgb(255, 255, 255);
+            justify-content:center;  /* me centra el contenido, debe tener display:flex activado! */
+            flex-direction: column;
+            border-radius: 5px;
+        }
+        .card{
+            border: 3px solid #000;
+            border-radius: 5px;
+            width: 20rem;
+            h4{
+                font-size:20px;
+                display:flex;
+                justify-content: center;
+            }
+            p{
+                font-size:20px;
+                display:flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+#carousel-tienda{
+    display:none;
+}
+
+
+@media screen and (max-width:1200px){
+    .main-index .banda-tienda__casillas .card{
+        border: 3px solid #000;
+        border-radius: 5px;
+        width: 15rem;
+        h4{
+            font-size:16px;
+            display:flex;
+            justify-content: center;
+        }
+        p{
+            font-size:16px;
+            display:flex;
+            justify-content: center;
+        }
+    }
+}
+@media screen and (max-width:992px){ }
+@media screen and (max-width: 768px) { /* La pantalla tablet */
+    #carousel-tienda{
+        display:contents;
+    }
+    .banda-tienda{
+        display:flex;
+        row-gap: 20px;
+        padding: 100px 0 100px 0;
+    }
+    .banda-tienda__casillas .card{
+        display:none;
+    }
+    .carousel-control-prev,.carousel-control-next{
+        position:relative;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/proyecto/imagenes/arrow_left.png);
+    }
+    .carousel-control-next-icon {
+        background-image: url(/proyecto/imagenes/arrow_right.png);
+    }
+    #carousel-tienda .carousel-indicators{
+        position:relative;
+        top:110%;
+        flex-wrap: wrap;
+    }
+    #carousel-tienda .carousel-indicators [data-bs-target] {
+        background-color: rgb(255, 255, 255);
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card{
+        display:contents;
+        border: 3px solid #000;
+        border-radius: 5px;
+        /* width: 10rem; */
+    }
+    #carousel-tienda .carousel-control-next-icon, .carousel-control-prev-icon{
+        width:4rem;
+        height:4rem;
+    }
+    #carousel-tienda .carousel-inner {
+        width:70%;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card h4{
+        font-size:25px;
+        display:flex;
+        justify-content: center;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card p{
+        font-size:25px;
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px){
+    #carousel-tienda .carousel-inner .carousel-item .card h4{
+        font-size:20px;
+    }
+    #carousel-tienda .carousel-inner .carousel-item .card p{
+        font-size:20px;
+    }
+}

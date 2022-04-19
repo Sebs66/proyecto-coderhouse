@@ -1,0 +1,250 @@
+/* Partial pagina Wikiplantas */
+body main .banda-wikiplantas{
+    width:100%;
+    margin:auto;
+    display:flex;
+    background-color:rgb(255, 255, 255);
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    padding:50px;
+    row-gap: 50px;
+    .banda-intro{
+        padding-bottom: 20px;
+        h2{font-size:50px;}
+        p{font-size:30px;}
+        &__iconos{
+            display:flex;
+            flex-direction: row;
+            justify-content:center;
+            padding: 20px 10px 30px 10px;
+            a{
+                position:relative;
+                z-index: 0;
+                border:solid 5px rgb(255, 255, 255);
+                &:hover{
+                    animation-name:shake;
+                    animation-iteration-count:1;
+                    animation-timing-function: linear;
+                    animation-duration:500ms;
+                    animation-delay:0s;
+                    position:relative;
+                    z-index: 1;
+                    border:solid 5px rgb(0, 0, 0);
+                    border-radius: 5%;
+                }
+            }
+            img{
+                width:100px;
+                height:100px;
+            }
+        }
+        &__1200px{
+            padding-bottom: 20px;
+            h2{font-size:50px;}
+            p{font-size:30px;}
+        }
+    }
+    .infografias{
+            display:flex;
+            flex-flow: row wrap;
+            gap: 20px;
+            padding: 20px 20px;
+            width:100%;
+            .tarjeta1{
+                /*     background-color: rgb(255, 255, 255); */
+                    display:flex;
+                    flex-flow:row nowrap;
+                    align-items:center;
+                    /* gap:20px; */
+                    .tarjeta-imagen {
+                        display:flex;
+                        align-items:center; 
+                        justify-content:center;
+                        width:auto;
+                        background-color:rgb(255, 255, 255);
+                        border: 5px solid #000;
+                        border-radius: 50%;
+                        z-index:1;
+                        img{
+                            height:400px;
+                            width:400px;
+                            /* background-color:rgb(255, 255, 255); */
+                            border-radius: 50%;
+                            z-index:1;
+                        }
+                    }
+                    .tarjeta-texto1{
+                        /*     font-family: 'Fredoka', sans-serif; */
+                            display:flex;
+                            flex-flow:column nowrap;
+                            height:90%;
+                            align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+                            background-color: rgb(124, 252, 209);
+                            padding:0 10px 0 120px;
+                            position:relative;
+                            right:100px;
+                            z-index:0;
+                            border-radius: 15px 15px 15px 15px;
+                            width:100%;
+                            justify-content: space-evenly;
+                        }
+                }
+            .tarjeta2{
+                /*    background-color: rgb(255, 255, 255); */
+                    display:flex;
+                    flex-flow:row-reverse nowrap;
+                    align-items:center;
+                    /* gap:20px; */
+                    .tarjeta-imagen {
+                        display:flex;
+                        align-items:center; 
+                        justify-content:center;
+                        width:auto;
+                        background-color:rgb(255, 255, 255);
+                        border: 5px solid #000;
+                        border-radius: 50%;
+                        z-index:1;
+                        img{
+                            height:400px;
+                            width:400px;
+                            /* background-color:rgb(255, 255, 255); */
+                            border-radius: 50%;
+                            z-index:1;
+                        }
+                    }
+                    .tarjeta-texto2{
+                        /*     font-family: 'Fredoka', sans-serif; */
+                        display:flex;
+                        flex-flow:column nowrap;
+                        height:90%;
+                        align-items: center; /* Me alinea el contenido, en este caso, el <p> en el centro de la tarjeta */
+                        background-color: rgb(124, 252, 209);
+                        padding:0 120px 0 30px;
+                        position:relative;
+                        left:100px;
+                        z-index:0;
+                        border-radius: 15px 15px 15px 15px;
+                        width:100%;
+                        justify-content: space-evenly;
+                    }
+                }
+                .tarjeta-texto1 h3, .tarjeta-texto2 h3{
+                    font-weight: 900;
+                }
+        }
+    .banda-intro__1200px{
+        display:none;
+    }
+}
+body main .banda-wikiplantas2{
+    display:none;
+    .infografias-bootstrap{
+        display:none;
+    }
+}
+/* Media Queries Wikiplantas */
+@media screen and (max-width:1400px) {  
+    .banda-wikiplantas{
+        width:90%;
+    }
+    /* ocultamos la banda-intro iconos de wikiplantas */
+    .banda-wikiplantas .banda-intro .banda-intro__iconos{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width:1200px){
+    body main{
+        .banda-wikiplantas{
+            .infografias{
+                display:none;
+            }
+            .banda-intro{
+                display:none;
+            }
+            .banda-intro__1200px{
+                display:initial;
+                .banda-intro__iconos {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+        .banda-wikiplantas2{
+            display:flex;
+            width:100%;
+            margin:auto;
+            display:flex;
+            background-color:rgb(124, 252, 209);
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            font-family: 'Fredoka', sans-serif;
+            padding:50px;
+            row-gap: 50px;
+            .infografias-bootstrap{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                width:70%;
+                row-gap: 10px;
+                background-color:rgb(255, 255, 255);
+                padding: 20px 0 20px 0;
+                border-radius: 20px;
+                h3{
+                    font-weight: 900;
+                    font-size: 25px;
+                }
+                &__card{
+                    display:flex;
+                    flex-direction: column;
+                    background-color: rgb(255, 255, 255);
+                    width:90%;
+                    align-items: center;
+                    border: solid 10px rgb(124, 252, 209);   
+                    border-radius: 10px;
+                    img{
+                        height:300px;
+                        width:300px;
+                    }
+                    .accordion{
+                        width:100%;
+                    }
+                    &__titulo{
+                        border-bottom: solid 10px rgb(124, 252, 209);
+                        width:100%;
+                        text-align: center;
+                    }
+                } 
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) { /* La pantalla tablet */
+    body main .banda-wikiplantas2 .infografias-bootstrap{
+    width:100%; /* banda de página wikiplantas (padre es wikiplantas2) */
+    }
+}
+@media screen and (max-width: 650px){
+    body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img{
+        width:250px;
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width: 576px){
+    body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img{
+        width:200px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 480px) { /* La pantalla celular */
+    body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img{
+        width:150px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,44 @@
+.banda-contacto{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aqua; */
+    width:80%;
+    margin:auto;
+    text-align: center;
+    h2{
+        font-size: 30px;
+    }
+    &__formulario{
+        display:flex;
+        padding:50px 0 0 0; 
+        width:50%;
+        justify-content: center;
+        /* background-color: rgb(255, 0, 221); */
+        margin:auto;
+    }
+
+}
+
+.formulario{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 8fr 1fr 1fr ;
+    width:100%;
+    gap:10px;
+    &__inputs{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        margin:auto;
+        width:100%;
+        &__lineas{
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width:90%;
+            margin:auto;
+        }
+    }
+
+}
