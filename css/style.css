@@ -25,6 +25,10 @@ body {
   width: 100%;
 }
 
+#header {
+  font-family: 'Fredoka', sans-serif;
+}
+
 #header .banner {
   background-image: url(../imagenes/banner-wide.png);
   height: 156px;
@@ -293,7 +297,6 @@ main .banda-miniaturas .miniaturas .miniaturas-items img {
   main .banda-miniaturas .miniaturas .miniaturas-items {
     height: 300px;
     width: 300px;
-    border: 5px solid #02a71d;
     background-color: white;
     border-radius: 0 0 10% 0;
     text-align: center;
@@ -1032,6 +1035,11 @@ body main .banda-quienes_somos .banda-direccion {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+#pie-pagina a {
+  text-decoration: none;
+  color: #11290e;
 }
 
 #pie-pagina .planilla_footer {

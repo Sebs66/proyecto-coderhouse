@@ -1,10 +1,13 @@
 #pie-pagina{
-    background: rgb(2, 167, 29);
+    background: $colorVerdeBandas;
     border: 2px solid rgb(0, 0, 0);
     padding-top: 10px;
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    a{
+        text-decoration: none; 
+        color: $colorTexto2Index}
     .planilla_footer{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -60,13 +63,13 @@
         justify-content: space-around;
     }
     .leaf_footer {
-        background-color: rgb(151, 221, 45);
+        background-color: $colorLeaf;
         margin: 0px;
         border-radius: 50px 0 50px 0;
         padding: 0px 20px; 
     }
     .leaf_footer:hover {
-        background-color: rgba(96, 138, 33, 0.801);    
+        background-color: $colorLeafHover;
     }
 }
 @media screen and (max-width:992px){ 
