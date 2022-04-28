@@ -20,6 +20,11 @@
                 background-color: $colorLeafHover
             }
         }
+        .leaf_2 {
+            @extend .leaf;
+            border:inset;
+            border-color:$colorVerdeOscuroBackgroundTienda;
+        }
     }
     nav.bg-light{
         background-color:$colorVerdeBandas !important; 

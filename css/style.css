@@ -45,19 +45,24 @@ body {
           flex-grow: inherit;
 }
 
-#header nav .leaf {
+#header nav .leaf, #header nav .leaf_2 {
   background-color: #97dd2d;
   margin: 0px;
   border-radius: 50px 0 50px 0;
   padding: 10px 20px;
 }
 
-#header nav .leaf:hover {
+#header nav .leaf:hover, #header nav .leaf_2:hover {
   background-color: rgba(96, 138, 33, 0.801);
 }
 
+#header nav .leaf_2 {
+  border: inset;
+  border-color: green;
+}
+
 #header nav.bg-light {
-  background-color: #02a71d !important;
+  background-color: #02a71e !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -219,7 +224,7 @@ main .banda-miniaturas .miniaturas {
 main .banda-miniaturas .miniaturas .miniaturas-items {
   height: 400px;
   width: 400px;
-  border: 5px solid #02a71d;
+  border: 5px solid #02a71e;
   background-color: white;
   border-radius: 0 0 10% 0;
   text-align: center;
@@ -234,8 +239,61 @@ main .banda-miniaturas .miniaturas .miniaturas-items a {
   text-decoration: none;
 }
 
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_1 {
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+  font-size: 30px;
+  background-color: #97dd2d;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 10px 20px;
+  color: black;
+  font-weight: bolder;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_1:hover {
+  background-color: #486819;
+  color: white;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_2 {
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+  font-size: 30px;
+  background-color: #486819;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bolder;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_2:hover {
+  background-color: #97dd2d;
+  color: black;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_3 {
+  position: relative;
+  bottom: 30px;
+  left: 5px;
+  font-size: 30px;
+  background-color: #bbff56;
+  margin: 0px;
+  border-radius: 50px 0 50px 0;
+  padding: 10px 20px;
+  color: #351212;
+  font-weight: bolder;
+}
+
+main .banda-miniaturas .miniaturas .miniaturas-items .leaf_index_3:hover {
+  background-color: #2d4902;
+  color: #b1b1b1;
+}
+
 main .banda-miniaturas .miniaturas .miniaturas-items p {
-  /* Clase LEAF como arriba! */
   position: relative;
   bottom: 30px;
   left: 5px;
@@ -1021,8 +1079,9 @@ body main .banda-quienes_somos .banda-direccion {
   }
 }
 
+/* InicioFooter */
 #pie-pagina {
-  background: #02a71d;
+  background: #02a71e;
   border: 2px solid black;
   padding-top: 10px;
   display: -webkit-box;
@@ -1035,6 +1094,13 @@ body main .banda-quienes_somos .banda-direccion {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  color: #dff0d8;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#pie-pagina h4 {
+  font-weight: bold;
 }
 
 #pie-pagina a {
@@ -1049,6 +1115,9 @@ body main .banda-quienes_somos .banda-direccion {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr 1fr 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #pie-pagina .planilla_footer h4:nth-child(1) {
@@ -1156,8 +1225,20 @@ body main .banda-quienes_somos .banda-direccion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+#pie-pagina .banda_iconos div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
 }
 
 #pie-pagina .leaf_footer {
@@ -1169,6 +1250,16 @@ body main .banda-quienes_somos .banda-direccion {
 
 #pie-pagina .leaf_footer:hover {
   background-color: rgba(96, 138, 33, 0.801);
+}
+
+.banda-iconos__instagram {
+  color: #DE2155;
+  font-weight: bolder;
+}
+
+.banda-iconos__facebook {
+  color: #6F31F5;
+  font-weight: bolder;
 }
 
 @media screen and (max-width: 992px) {

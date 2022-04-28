@@ -100,7 +100,32 @@ main{
                 a{
                     text-decoration: none;  
                 }
-                p{ /* Clase LEAF como arriba! */
+                @mixin leaf_index($backColor,$fontColor,$backColor_hov,$fontColor_hov){
+                    position:relative;
+                    bottom:30px;
+                    left: 5px;
+                    font-size:30px;
+                    background-color: $backColor;
+                    margin: 0px;
+                    border-radius: 50px 0 50px 0;
+                    padding: 10px 20px; 
+                    color:$fontColor;
+                    font-weight: bolder;
+                    &:hover {
+                        background-color: $backColor_hov;  
+                        color:$fontColor_hov;  
+                    }
+                }
+                .leaf_index_1{
+                    @include leaf_index(rgb(151, 221, 45),rgb(0, 0, 0),rgb(72, 104, 25),rgb(255, 255, 255))
+                }
+                .leaf_index_2{
+                    @include leaf_index(rgb(72, 104, 25),rgb(255, 255, 255),rgb(151, 221, 45),rgb(0, 0, 0))
+                }
+                .leaf_index_3{
+                    @include leaf_index(rgb(187, 255, 86),rgb(53, 18, 18),rgb(45, 73, 2),rgb(177, 177, 177))
+                }
+                p{ 
                     position:relative;
                     bottom:30px;
                     left: 5px;

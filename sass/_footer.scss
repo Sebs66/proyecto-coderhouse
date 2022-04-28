@@ -1,3 +1,4 @@
+/* InicioFooter */
 #pie-pagina{
     background: $colorVerdeBandas;
     border: 2px solid rgb(0, 0, 0);
@@ -5,13 +6,21 @@
     display:flex;
     flex-direction: row;
     justify-content: space-evenly;
+    color:rgb(223, 240, 216);
+    font-weight: bold;
+    font-size: 1rem;
+    h4{
+        font-weight: bold;
+    }
     a{
         text-decoration: none; 
-        color: $colorTexto2Index}
+        color: $colorTexto2Index
+    }
     .planilla_footer{
         display:grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
+        align-items: center;
         h4:nth-child(1){ /* Horarios Tienda */
             grid-column:1/2;
             grid-row:1/2;
@@ -60,18 +69,39 @@
     .banda_iconos{
         padding-top: 10px;
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
+        div{
+            display:flex;
+            column-gap: 10px;
+        }
     }
-    .leaf_footer {
+     .leaf_footer {
+
         background-color: $colorLeaf;
         margin: 0px;
         border-radius: 50px 0 50px 0;
         padding: 0px 20px; 
+        &:hover{
+            background-color: $colorLeafHover;
+        }
     }
-    .leaf_footer:hover {
-        background-color: $colorLeafHover;
-    }
+
 }
+// MAPA. Item,valor
+$banda_icons:(
+    instagram:#DE2155,
+    facebook: #6F31F5,
+);
+.banda-iconos__instagram{
+    color:map-get($map:$banda_icons,$key:instagram);
+    font-weight:bolder;
+}
+.banda-iconos__facebook{
+    color:map-get($map:$banda_icons,$key:facebook);
+    font-weight:bolder;
+}
+
 @media screen and (max-width:992px){ 
     #pie-pagina .planilla_footer{
         display:grid;
