@@ -655,7 +655,7 @@ body main #flecha_arriba img {
   background-color: #02a71e;
   border: solid 2px #02a71e;
   opacity: 70%;
-  z-index: 5;
+  z-index: 1;
 }
 
 body main #flecha_arriba img:hover {
@@ -768,13 +768,16 @@ body main #flecha_arriba img:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    top: 0px;
+    top: 25%;
     right: 1%;
   }
   body main #barraLateralAuxiliarWikiplantasDerecha .barraLateralAuxiliarWikiplantas__item img {
@@ -784,7 +787,7 @@ body main #flecha_arriba img:hover {
     background-color: #02a71e;
     border: solid 2px #02a71e;
     opacity: 70%;
-    z-index: 5;
+    z-index: 1;
   }
   body main #barraLateralAuxiliarWikiplantasDerecha .barraLateralAuxiliarWikiplantas__item img:hover {
     opacity: 100%;
@@ -796,15 +799,16 @@ body main #flecha_arriba img:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    height: 100%;
-    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     position: fixed;
-    top: 0px;
-    left: 5vw;
+    top: 25%;
+    left: 1%;
   }
   body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img {
     border-radius: 50%;
@@ -813,7 +817,7 @@ body main #flecha_arriba img:hover {
     background-color: #02a71e;
     border: solid 2px #02a71e;
     opacity: 70%;
-    z-index: 5;
+    z-index: 1;
   }
   body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img:hover {
     opacity: 100%;

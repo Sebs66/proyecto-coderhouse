@@ -159,7 +159,7 @@ body main #flecha_arriba{
         background-color:$colorVerdeBandas;
         border: solid 2px $colorVerdeBandas;
         opacity: 70%;
-        z-index: 5;
+        z-index: 1;
         &:hover{
             opacity: 100%;
         }
@@ -247,10 +247,11 @@ body main #flecha_arriba{
         #barraLateralAuxiliarWikiplantasDerecha{
             display:flex;
             justify-content: center;
-            height:100%;
+            height:fit-content;
+            margin:auto;
             flex-direction: column;
             position: fixed;
-            top:0px;
+            top:25%;
             right: 1%;
             .barraLateralAuxiliarWikiplantas__item{
                 img{
@@ -260,7 +261,7 @@ body main #flecha_arriba{
                     background-color:$colorVerdeBandas;
                     border: solid 2px $colorVerdeBandas;
                     opacity: 70%;
-                    z-index: 5;
+                    z-index: 1;
                     &:hover{
                         opacity: 100%;
                     }
@@ -270,12 +271,11 @@ body main #flecha_arriba{
         #barraLateralAuxiliarWikiplantasIzquierda{
             display:flex;
             justify-content: center;
-            height:100%;
-            width:100%;
+            height:fit-content;
             flex-direction: column;
             position: fixed;
-            top:0px;
-            left: 5vw;
+            top:25%;
+            left: 1%;
             .barraLateralAuxiliarWikiplantas__item{
                 img{
                     border-radius: 50%;
@@ -284,7 +284,7 @@ body main #flecha_arriba{
                     background-color:$colorVerdeBandas;
                     border: solid 2px $colorVerdeBandas;
                     opacity: 70%;
-                    z-index: 5;
+                    z-index: 1;
                     &:hover{
                         opacity: 100%;
                     }
