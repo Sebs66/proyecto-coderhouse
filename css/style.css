@@ -833,34 +833,6 @@ body main #flecha_arriba img:hover {
   body main .banda-wikiplantas .banda-intro__1200px p {
     font-size: 20px;
   }
-  body main #barraLateralAuxiliarWikiplantasIzquierda {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    position: fixed;
-    top: 0px;
-    left: 1%;
-  }
-  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img {
-    border-radius: 50%;
-    height: 75px;
-    width: 75px;
-    background-color: #02a71e;
-    border: solid 2px #02a71e;
-    opacity: 70%;
-    z-index: 5;
-  }
-  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img:hover {
-    opacity: 100%;
-  }
 }
 
 @media screen and (max-width: 650px) {

@@ -302,30 +302,7 @@ body main #flecha_arriba{
         .banda-wikiplantas .banda-intro__1200px{
             p{font-size: 20px;             
             }
-        }
-        #barraLateralAuxiliarWikiplantasIzquierda{
-            display:flex;
-            justify-content: center;
-            height:100%;
-            flex-direction: column;
-            position: fixed;
-            top:0px;
-            left: 1%;
-            .barraLateralAuxiliarWikiplantas__item{
-                img{
-                    border-radius: 50%;
-                    height:75px;
-                    width:75px;
-                    background-color:$colorVerdeBandas;
-                    border: solid 2px $colorVerdeBandas;
-                    opacity: 70%;
-                    z-index: 5;
-                    &:hover{
-                        opacity: 100%;
-                    }
-                }
-            }
-        }        
+        }       
     }
 }
 @media screen and (max-width: 650px){
