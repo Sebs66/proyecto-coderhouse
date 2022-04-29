@@ -405,6 +405,7 @@ body main .banda-wikiplantas .banda-intro {
 
 body main .banda-wikiplantas .banda-intro h2 {
   font-size: 50px;
+  font-weight: bold;
 }
 
 body main .banda-wikiplantas .banda-intro p {
@@ -626,6 +627,25 @@ body main .banda-wikiplantas2 .infografias-bootstrap {
   display: none;
 }
 
+body main #flecha_arriba img {
+  position: fixed;
+  top: 85%;
+  left: 90vw;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: #02a71e;
+  border: solid 2px #02a71e;
+  opacity: 70%;
+  z-index: 5;
+}
+
+body main #flecha_arriba img:hover {
+  opacity: 100%;
+}
+
 /* Media Queries Wikiplantas */
 @media screen and (max-width: 1400px) {
   .banda-wikiplantas {
@@ -723,6 +743,12 @@ body main .banda-wikiplantas2 .infografias-bootstrap {
     width: 100%;
     text-align: center;
   }
+  body main #flecha_arriba img {
+    left: 90%;
+    top: 90%;
+    height: 50px;
+    width: 50px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -744,6 +770,12 @@ body main .banda-wikiplantas2 .infografias-bootstrap {
   body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img {
     width: 200px;
     height: 200px;
+  }
+  body main #flecha_arriba img {
+    left: 88%;
+    top: 90%;
+    height: 50px;
+    width: 50px;
   }
 }
 
@@ -953,7 +985,9 @@ body main .banda-wikiplantas2 .infografias-bootstrap {
 }
 
 .banda-contacto h2 {
-  font-size: 30px;
+  font-size: 50px;
+  color: black;
+  font-weight: bold;
 }
 
 .banda-contacto__formulario {
@@ -1022,8 +1056,21 @@ body main .banda-quienes_somos {
 }
 
 body main .banda-quienes_somos h2 {
-  font-size: 30px;
+  font-size: 50px;
   padding-bottom: 20px;
+  padding-top: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+body main .banda-quienes_somos p {
+  color: black;
+  font-weight: bold;
+}
+
+body main .banda-quienes_somos a {
+  color: green;
+  text-decoration: none;
 }
 
 body main .banda-quienes_somos .banda-direccion {

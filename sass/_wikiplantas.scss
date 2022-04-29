@@ -12,7 +12,7 @@ body main .banda-wikiplantas{
     row-gap: 50px;
     .banda-intro{
         padding-bottom: 20px;
-        h2{font-size:50px;}
+        h2{font-size:50px; font-weight: bold;}
         p{font-size:30px;}
         &__iconos{
             display:flex;
@@ -144,6 +144,24 @@ body main .banda-wikiplantas2{
         display:none;
     }
 }
+body main #flecha_arriba{
+    img{
+        position: fixed;
+        top:85%;
+        left: 90vw;
+        transform: rotate(90deg);
+        border-radius: 50%;
+        height:100px;
+        width:100px;
+        background-color:$colorVerdeBandas;
+        border: solid 2px $colorVerdeBandas;
+        opacity: 70%;
+        z-index: 5;
+        &:hover{
+            opacity: 100%;
+        }
+    }
+}
 /* Media Queries Wikiplantas */
 @media screen and (max-width:1400px) {  
     .banda-wikiplantas{
@@ -218,7 +236,14 @@ body main .banda-wikiplantas2{
                 } 
             }
         }
-
+        #flecha_arriba{
+            img{
+                left: 90%;
+                top: 90%;
+                height:50px;
+                width:50px;
+            }
+        }
     }
 }
 
@@ -239,6 +264,14 @@ body main .banda-wikiplantas2{
     body main .banda-wikiplantas2 .infografias-bootstrap .infografias-bootstrap__card img{
         width:200px;
         height: 200px;
+    }
+    body main #flecha_arriba{
+        img{
+            left: 88%;
+            top: 90%;
+            height:50px;
+            width:50px;
+        }
     }
 }
 
