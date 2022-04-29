@@ -46,6 +46,7 @@ body {
 }
 
 #header nav .leaf, #header nav .leaf_2 {
+  max-width: 200px;
   background-color: #97dd2d;
   margin: 0px;
   border-radius: 50px 0 50px 0;
@@ -63,6 +64,17 @@ body {
 
 #header nav.bg-light {
   background-color: #02a71e !important;
+}
+
+@media screen and (max-width: 1000px) {
+  nav .leaf, #header nav .leaf_2 {
+    width: 200px;
+  }
+  .navbar-nav {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -627,10 +639,14 @@ body main .banda-wikiplantas2 .infografias-bootstrap {
   display: none;
 }
 
+body main #barraLateralAuxiliarWikiplantasIzquierda, #barraLateralAuxiliarWikiplantasDerecha {
+  display: none;
+}
+
 body main #flecha_arriba img {
   position: fixed;
   top: 85%;
-  left: 90vw;
+  right: 5%;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   border-radius: 50%;
@@ -667,10 +683,6 @@ body main #flecha_arriba img:hover {
   }
   body main .banda-wikiplantas .banda-intro__1200px {
     display: initial;
-  }
-  body main .banda-wikiplantas .banda-intro__1200px .banda-intro__iconos {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
   body main .banda-wikiplantas2 {
     display: -webkit-box;
@@ -744,18 +756,106 @@ body main #flecha_arriba img:hover {
     text-align: center;
   }
   body main #flecha_arriba img {
-    left: 90%;
     top: 90%;
     height: 50px;
     width: 50px;
+    right: 2%;
+  }
+  body main #barraLateralAuxiliarWikiplantasDerecha {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 1%;
+  }
+  body main #barraLateralAuxiliarWikiplantasDerecha .barraLateralAuxiliarWikiplantas__item img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    background-color: #02a71e;
+    border: solid 2px #02a71e;
+    opacity: 70%;
+    z-index: 5;
+  }
+  body main #barraLateralAuxiliarWikiplantasDerecha .barraLateralAuxiliarWikiplantas__item img:hover {
+    opacity: 100%;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 5vw;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    background-color: #02a71e;
+    border: solid 2px #02a71e;
+    opacity: 70%;
+    z-index: 5;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img:hover {
+    opacity: 100%;
   }
 }
 
 @media screen and (max-width: 768px) {
   /* La pantalla tablet */
   body main .banda-wikiplantas2 .infografias-bootstrap {
-    width: 100%;
+    width: 85%;
     /* banda de página wikiplantas (padre es wikiplantas2) */
+  }
+  body main .banda-wikiplantas .banda-intro__1200px p {
+    font-size: 20px;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: fixed;
+    top: 0px;
+    left: 1%;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    background-color: #02a71e;
+    border: solid 2px #02a71e;
+    opacity: 70%;
+    z-index: 5;
+  }
+  body main #barraLateralAuxiliarWikiplantasIzquierda .barraLateralAuxiliarWikiplantas__item img:hover {
+    opacity: 100%;
   }
 }
 
