@@ -275,90 +275,9 @@ main .banda-miniaturas .miniaturas .miniaturas-items img {
 }
 
 main .banda-miniaturas_mobile {
-  background-color: green;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: 'Fredoka', sans-serif;
-  padding: 50px;
-  row-gap: 50px;
-}
-
-main .banda-miniaturas_mobile h2 {
-  font-size: 100px;
-  color: white;
-}
-
-main .banda-miniaturas_mobile .miniaturas {
-  /* miniaturas de las plantas vistas en página main, subitem miniaturas-item */
-  background-color: pink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  /* la direccion del flex será en filas y se ajustará en múltiples lineas */
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  /* los elementos estarán equiespaciados */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 80%;
-  row-gap: 30px;
-  padding: 10px;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items {
-  height: 400px;
-  width: 400px;
-  border: 5px solid #02a71e;
-  background-color: white;
-  border-radius: 0 0 10% 0;
-  text-align: center;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items:hover {
-  border: 5px solid #486819;
-  background-color: white;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items a {
-  text-decoration: none;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items p {
-  position: relative;
-  bottom: 30px;
-  left: 5px;
-  font-size: 30px;
-  background-color: #97dd2d;
-  margin: 0px;
-  border-radius: 50px 0 50px 0;
-  padding: 10px 20px;
-  color: black;
-  font-weight: bolder;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items p:hover {
-  background-color: #486819;
-  color: white;
-}
-
-main .banda-miniaturas_mobile .miniaturas .miniaturas-items img {
-  width: auto;
-  height: 100%;
 }
 
 @media screen and (max-width: 1400px) {
@@ -371,13 +290,88 @@ main .banda-miniaturas_mobile .miniaturas .miniaturas-items img {
 }
 
 @media screen and (max-width: 1200px) {
-  .banda-miniaturas_mobile {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
+  main .banda-miniaturas_mobile {
+    background-color: green;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-family: 'Fredoka', sans-serif;
+    padding: 50px;
+    row-gap: 50px;
   }
-  .banda-miniaturas {
-    display: none !important;
+  main .banda-miniaturas_mobile h2 {
+    font-size: 100px;
+    color: white;
+  }
+  main .banda-miniaturas_mobile .miniaturas {
+    /* miniaturas de las plantas vistas en página main, subitem miniaturas-item */
+    background-color: pink;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    /* la direccion del flex será en filas y se ajustará en múltiples lineas */
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    /* los elementos estarán equiespaciados */
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 80%;
+    row-gap: 30px;
+    padding: 10px;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items {
+    height: 400px;
+    width: 400px;
+    border: 5px solid #02a71e;
+    background-color: white;
+    border-radius: 0 0 10% 0;
+    text-align: center;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items:hover {
+    border: 5px solid #486819;
+    background-color: white;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items a {
+    text-decoration: none;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items p {
+    position: relative;
+    bottom: 30px;
+    left: 5px;
+    font-size: 30px;
+    background-color: #97dd2d;
+    margin: 0px;
+    border-radius: 50px 0 50px 0;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bolder;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items p:hover {
+    background-color: #486819;
+    color: white;
+  }
+  main .banda-miniaturas_mobile .miniaturas .miniaturas-items img {
+    width: auto;
+    height: 100%;
+  }
+  main .banda-miniaturas {
+    display: none;
   }
 }
 
