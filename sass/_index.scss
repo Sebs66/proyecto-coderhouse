@@ -116,15 +116,6 @@ main{
                         color:$fontColor_hov;  
                     }
                 }
-                .leaf_index_1{
-                    @include leaf_index(rgb(151, 221, 45),rgb(0, 0, 0),rgb(72, 104, 25),rgb(255, 255, 255))
-                }
-                .leaf_index_2{
-                    @include leaf_index(rgb(72, 104, 25),rgb(255, 255, 255),rgb(151, 221, 45),rgb(0, 0, 0))
-                }
-                .leaf_index_3{
-                    @include leaf_index(rgb(187, 255, 86),rgb(53, 18, 18),rgb(45, 73, 2),rgb(177, 177, 177))
-                }
                 p{ 
                     position:relative;
                     bottom:30px;
@@ -148,11 +139,94 @@ main{
             }
         }
     }
+    .banda-miniaturas_mobile{
+        background-color:rgb(0, 128, 0);
+        display:none;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        font-family: 'Fredoka', sans-serif;
+        padding:50px;
+        row-gap: 50px;
+        h2{
+            font-size: 100px;
+            color:rgb(255, 255, 255);
+        }
+        .miniaturas{ /* miniaturas de las plantas vistas en página main, subitem miniaturas-item */
+            background-color:rgb(255, 192, 203);
+            display:flex;
+            flex-flow:row wrap; /* la direccion del flex será en filas y se ajustará en múltiples lineas */
+            justify-content: space-evenly; /* los elementos estarán equiespaciados */
+            align-items:center;
+            width:80%;
+            row-gap: 30px;
+            padding:10px;
+            .miniaturas-items{
+                height: 400px;
+                width:400px;
+                border: 5px solid $colorVerdeBandas;
+                background-color: rgb(255, 255, 255);
+                border-radius: 0 0 10% 0;
+                text-align: center;
+                &:hover{
+                    border: 5px solid rgb(72, 104, 25);  
+                    background-color: rgb(255, 255, 255);
+                }
+                a{
+                    text-decoration: none;  
+                }
+                @mixin leaf_index($backColor,$fontColor,$backColor_hov,$fontColor_hov){
+                    position:relative;
+                    bottom:30px;
+                    left: 5px;
+                    font-size:30px;
+                    background-color: $backColor;
+                    margin: 0px;
+                    border-radius: 50px 0 50px 0;
+                    padding: 10px 20px; 
+                    color:$fontColor;
+                    font-weight: bolder;
+                    &:hover {
+                        background-color: $backColor_hov;  
+                        color:$fontColor_hov;  
+                    }
+                }
+                p{ 
+                    position:relative;
+                    bottom:30px;
+                    left: 5px;
+                    font-size:30px;
+                    background-color: rgb(151, 221, 45);
+                    margin: 0px;
+                    border-radius: 50px 0 50px 0;
+                    padding: 10px 20px; 
+                    color:rgb(0, 0, 0);
+                    font-weight: bolder;
+                    &:hover {
+                        background-color: rgb(72, 104, 25);  
+                        color:rgb(255, 255, 255);  
+                    }
+                }
+                img{
+                    width:auto;
+                    height:100%;
+                }
+            }
+        }  
+    }
 }
 @media screen and (max-width:1400px){ 
     main .principal .texto-imagen .texto-imagen__texto{
         h2{font-size:24px;}
         p{font-size: 18px;}
+    }
+}
+@media screen and (max-width:1200px){ 
+    .banda-miniaturas_mobile{
+        display:flex !important;
+    }
+    .banda-miniaturas{
+        display:none !important;
     }
 }
 @media screen and (max-width:992px){ 
