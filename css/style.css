@@ -277,7 +277,7 @@ main .banda-miniaturas .miniaturas .miniaturas-items img {
 main .banda-miniaturas_mobile {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: none;
 }
 
 @media screen and (max-width: 1400px) {
